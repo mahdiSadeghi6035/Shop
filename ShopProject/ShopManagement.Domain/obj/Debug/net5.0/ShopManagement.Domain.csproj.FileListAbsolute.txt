@@ -1,0 +1,17 @@
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\bin\Debug\net5.0\ShopManagement.Domain.deps.json
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\bin\Debug\net5.0\ShopManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\bin\Debug\net5.0\ShopManagement.Domain.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\bin\Debug\net5.0\ShopManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\bin\Debug\net5.0\_0_Framework.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\bin\Debug\net5.0\ShopManagement.Application.Contract.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\bin\Debug\net5.0\_0_Framework.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.csproj.AssemblyReference.cache
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.AssemblyInfoInputs.cache
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.AssemblyInfo.cs
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.csproj.CoreCompileInputs.cache
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.csproj.CopyComplete
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\obj\Debug\net5.0\refint\ShopManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\obj\Debug\net5.0\ShopManagement.Domain.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Domain\obj\Debug\net5.0\ref\ShopManagement.Domain.dll

@@ -11,15 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SM.Application", "SM.Applic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SM.Infrastructure", "SM.Infrastructure", "{8D4CA724-C476-4FDD-B77D-3B718B4FA696}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_0_Framework", "_0_Framework\_0_Framework.csproj", "{0D3E97FD-9CA4-4EA6-9912-EE8BB07ABC9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_0_Framework", "_0_Framework\_0_Framework.csproj", "{0D3E97FD-9CA4-4EA6-9912-EE8BB07ABC9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Domain", "ShopManagement.Domain\ShopManagement.Domain.csproj", "{A182B66E-1135-4D86-AC4E-CB4E2DACF454}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Domain", "ShopManagement.Domain\ShopManagement.Domain.csproj", "{A182B66E-1135-4D86-AC4E-CB4E2DACF454}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Application.Contract", "ShopManagement.Application.Contract\ShopManagement.Application.Contract.csproj", "{44ED895C-2A8B-46E7-ABB3-9B55C423CE68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Application.Contract", "ShopManagement.Application.Contract\ShopManagement.Application.Contract.csproj", "{44ED895C-2A8B-46E7-ABB3-9B55C423CE68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Application", "ShopManagement.Application\ShopManagement.Application.csproj", "{2E00D8CD-F3FA-4BD1-A150-D929B8EF5255}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Application", "ShopManagement.Application\ShopManagement.Application.csproj", "{2E00D8CD-F3FA-4BD1-A150-D929B8EF5255}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Infrastructure.EfCore", "ShopManagement.Infrastructure.EfCore\ShopManagement.Infrastructure.EfCore.csproj", "{AFB74CC6-9A89-4A9E-BE94-FBA2923979C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Infrastructure.EfCore", "ShopManagement.Infrastructure.EfCore\ShopManagement.Infrastructure.EfCore.csproj", "{AFB74CC6-9A89-4A9E-BE94-FBA2923979C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Infrastructure.Configure", "ShopManagement.Infrastructure.Configure\ShopManagement.Infrastructure.Configure.csproj", "{530E4D2D-3920-4B2E-8AE4-E17B5B0F3E58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{D52F54DB-4F83-4320-88D1-9E3A3471836F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,14 @@ Global
 		{AFB74CC6-9A89-4A9E-BE94-FBA2923979C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFB74CC6-9A89-4A9E-BE94-FBA2923979C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFB74CC6-9A89-4A9E-BE94-FBA2923979C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{530E4D2D-3920-4B2E-8AE4-E17B5B0F3E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{530E4D2D-3920-4B2E-8AE4-E17B5B0F3E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{530E4D2D-3920-4B2E-8AE4-E17B5B0F3E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{530E4D2D-3920-4B2E-8AE4-E17B5B0F3E58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D52F54DB-4F83-4320-88D1-9E3A3471836F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52F54DB-4F83-4320-88D1-9E3A3471836F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52F54DB-4F83-4320-88D1-9E3A3471836F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52F54DB-4F83-4320-88D1-9E3A3471836F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +71,7 @@ Global
 		{44ED895C-2A8B-46E7-ABB3-9B55C423CE68} = {B5CF3E06-6BE6-4C39-A49D-31283E84D7A0}
 		{2E00D8CD-F3FA-4BD1-A150-D929B8EF5255} = {B5CF3E06-6BE6-4C39-A49D-31283E84D7A0}
 		{AFB74CC6-9A89-4A9E-BE94-FBA2923979C7} = {8D4CA724-C476-4FDD-B77D-3B718B4FA696}
+		{530E4D2D-3920-4B2E-8AE4-E17B5B0F3E58} = {8D4CA724-C476-4FDD-B77D-3B718B4FA696}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CEC11DCA-48E3-4DC4-92FE-41A2E9E21E94}
