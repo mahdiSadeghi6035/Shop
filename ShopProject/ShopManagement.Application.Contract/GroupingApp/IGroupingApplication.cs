@@ -9,5 +9,6 @@ namespace ShopManagement.Application.Contract.GroupingApp
         OperationResult Edit(EditGrouping command);
         EditGrouping Exists(long id);
         List<ViewModelGrouping> Search(SearchModelGrouping searchModel);
+        List<ViewModelGrouping> GetGroupings();
     }
 }

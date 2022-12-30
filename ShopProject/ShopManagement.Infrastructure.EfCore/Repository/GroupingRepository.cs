@@ -2,6 +2,7 @@
 using _0_Framework.Infrastructure;
 using ShopManagement.Application.Contract.GroupingApp;
 using ShopManagement.Domain.GroupingAgg;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -32,16 +33,25 @@ namespace ShopManagement.Infrastructure.EfCore.Repository
             }).FirstOrDefault(x => x.Id == id);
         }
 
+        public List<ViewModelGrouping> GetGroupings()
+        {
+            return _context.Groupings.Select(x => new ViewModelGrouping
+            {
+                Id = x.Id,
+                Name = x.Name
+            }).OrderByDescending(x => x.Id).ToList();
+        }
+
         public List<ViewModelGrouping> Search(SearchModelGrouping searchModel)
         {
             var query = _context.Groupings.Select(x => new ViewModelGrouping
             {
-                Id= x.Id,
+                Id = x.Id,
                 Name = x.Name,
                 Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
-                Description = x.Description,
+                Description = x.Description.Substring(0, Math.Min(x.Description.Length, 50)) + "...",
                 CreationDate = x.CreationDate.ToFarsi()
             });
 

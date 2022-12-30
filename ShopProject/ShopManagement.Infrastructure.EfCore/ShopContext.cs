@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ShopManagement.Domain.BrandAgg;
+using ShopManagement.Domain.CategoryAgg;
 using ShopManagement.Domain.GroupingAgg;
+using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Infrastructure.EfCore.Mapping;
 
 namespace ShopManagement.Infrastructure.EfCore
@@ -7,6 +10,9 @@ namespace ShopManagement.Infrastructure.EfCore
     public class ShopContext : DbContext
     {
         public DbSet<Grouping> Groupings { get; set; }
+        public DbSet<Category> Categorys{ get; set; }
+        public DbSet<Brand> Brands{ get; set; }
+        public DbSet<Product> Products { get; set; }
         public ShopContext(DbContextOptions<ShopContext> options) : base(options)
         {
 

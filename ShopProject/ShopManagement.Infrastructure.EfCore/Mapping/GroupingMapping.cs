@@ -18,6 +18,10 @@ namespace ShopManagement.Infrastructure.EfCore.Mapping
             builder.Property(x => x.Slug).IsRequired();
             builder.Property(x => x.Keywords).IsRequired();
             builder.Property(x => x.MetaDescription).IsRequired();
+
+            builder.HasMany(x => x.categories)
+                .WithOne(x => x.Groupings)
+                .HasForeignKey(x => x.GroupingId);
         }
     }
 }

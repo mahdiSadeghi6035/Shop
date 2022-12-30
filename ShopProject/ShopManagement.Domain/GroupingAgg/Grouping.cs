@@ -1,4 +1,6 @@
 ﻿using _0_Framework.Domain;
+using ShopManagement.Domain.CategoryAgg;
+using System.Collections.Generic;
 
 namespace ShopManagement.Domain.GroupingAgg
 {
@@ -12,6 +14,7 @@ namespace ShopManagement.Domain.GroupingAgg
         public string Slug { get; private set; }
         public string Keywords { get; private set; }
         public string MetaDescription { get; private set; }
+        public List<Category> categories { get; private set; }
 
         public Grouping(string name, string description, string picture, string pictureAlt,
             string pictureTitle, string slug, string keywords, string metaDescription)
@@ -24,6 +27,7 @@ namespace ShopManagement.Domain.GroupingAgg
             Slug = slug;
             Keywords = keywords;
             MetaDescription = metaDescription;
+            categories = new List<Category>();
         }
         public void Edit(string name, string description, string picture, string pictureAlt,
             string pictureTitle, string slug, string keywords, string metaDescription)

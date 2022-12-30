@@ -21,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Application"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Infrastructure.EfCore", "ShopManagement.Infrastructure.EfCore\ShopManagement.Infrastructure.EfCore.csproj", "{AFB74CC6-9A89-4A9E-BE94-FBA2923979C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopManagement.Infrastructure.Configure", "ShopManagement.Infrastructure.Configure\ShopManagement.Infrastructure.Configure.csproj", "{530E4D2D-3920-4B2E-8AE4-E17B5B0F3E58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopManagement.Infrastructure.Configure", "ShopManagement.Infrastructure.Configure\ShopManagement.Infrastructure.Configure.csproj", "{530E4D2D-3920-4B2E-8AE4-E17B5B0F3E58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{D52F54DB-4F83-4320-88D1-9E3A3471836F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{D52F54DB-4F83-4320-88D1-9E3A3471836F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

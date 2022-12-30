@@ -18,7 +18,7 @@ namespace ShopManagement.Application
         {
             var operation = new OperationResult();
             if (_groupingRepository.Exists(x => x.Name == command.Name))
-                return operation.Failde("امکان ثبت رکورد تکراری وجود ندارد.");
+                return operation.Failde(ApplicationMessages.DuplicatedRecord);
 
             string slug = command.Slug.Slugify();
             var grouping = new Grouping(command.Name, command.Description, command.Picture, command.PictureAlt, command.PictureTitle, slug, command.Keywords, command.MetaDescription);
@@ -33,10 +33,10 @@ namespace ShopManagement.Application
             var grouping = _groupingRepository.GetBy(command.Id);
 
             if (grouping == null)
-                return operation.Failde("رکورد وارد شده پیدا نشده است.");
+                return operation.Failde(ApplicationMessages.RecordNotFound);
 
             if (_groupingRepository.Exists(x => x.Name == command.Name && x.Id != command.Id))
-                return operation.Failde("امکان ثبت رکورد تکراری وجود ندارد.");
+                return operation.Failde(ApplicationMessages.DuplicatedRecord);
 
             string slug = command.Slug.Slugify();
             grouping.Edit(command.Name, command.Description, command.Picture, command.PictureAlt, command.PictureTitle, slug, command.Keywords, command.MetaDescription);
@@ -48,6 +48,11 @@ namespace ShopManagement.Application
         public EditGrouping Exists(long id)
         {
             return _groupingRepository.Exists(id);
+        }
+
+        public List<ViewModelGrouping> GetGroupings()
+        {
+            return _groupingRepository.GetGroupings();
         }
 
         public List<ViewModelGrouping> Search(SearchModelGrouping searchModel)
