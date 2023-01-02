@@ -171,3 +171,9 @@ D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Raz
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Product\Create.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Product\Edit.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Product\Index.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\ProductPicture\Create.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\ProductPicture\Edit.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\ProductPicture\Index.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Slide\Create.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Slide\Edit.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\Slide\Index.cshtml.g.cs

@@ -226,6 +226,76 @@ namespace ShopManagement.Infrastructure.EfCore.Migrations
                     b.ToTable("Product");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.ProductPictureAgg.ProductPicture", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PictureAlt")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PictureTitle")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductPicture");
+                });
+
+            modelBuilder.Entity("ShopManagement.Domain.SlideAgg.Slide", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PictureAlt")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PictureTitle")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Slide");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.CategoryAgg.Category", b =>
                 {
                     b.HasOne("ShopManagement.Domain.GroupingAgg.Grouping", "Groupings")
@@ -256,6 +326,17 @@ namespace ShopManagement.Infrastructure.EfCore.Migrations
                     b.Navigation("Categorys");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.ProductPictureAgg.ProductPicture", b =>
+                {
+                    b.HasOne("ShopManagement.Domain.ProductAgg.Product", "Products")
+                        .WithMany("ProductPictures")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Products");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.BrandAgg.Brand", b =>
                 {
                     b.Navigation("Products");
@@ -269,6 +350,11 @@ namespace ShopManagement.Infrastructure.EfCore.Migrations
             modelBuilder.Entity("ShopManagement.Domain.GroupingAgg.Grouping", b =>
                 {
                     b.Navigation("categories");
+                });
+
+            modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
+                {
+                    b.Navigation("ProductPictures");
                 });
 #pragma warning restore 612, 618
         }
