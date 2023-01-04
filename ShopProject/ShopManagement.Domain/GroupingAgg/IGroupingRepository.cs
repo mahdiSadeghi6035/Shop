@@ -9,5 +9,6 @@ namespace ShopManagement.Domain.GroupingAgg
         EditGrouping Exists(long id);
         List<ViewModelGrouping> Search(SearchModelGrouping searchModel);
         List<ViewModelGrouping> GetGroupings();
+        string GetSlug(long id);
     }
 }

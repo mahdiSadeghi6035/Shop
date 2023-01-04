@@ -1,6 +1,7 @@
 ﻿using _0_Framework.Application;
 using ShopManagement.Application.Contract.CategoryApp;
 using ShopManagement.Domain.CategoryAgg;
+using ShopManagement.Domain.GroupingAgg;
 using System.Collections.Generic;
 
 namespace ShopManagement.Application
@@ -8,10 +9,13 @@ namespace ShopManagement.Application
     public class CategoryApplication : ICategoryApplication
     {
         private readonly ICategoryRepository _categoryRepository;
-
-        public CategoryApplication(ICategoryRepository categoryRepository)
+        private readonly IFileUploader _fileUploader;
+        private readonly IGroupingRepository _groupingRepository;
+        public CategoryApplication(ICategoryRepository categoryRepository, IFileUploader fileUploader, IGroupingRepository groupingRepository)
         {
             _categoryRepository = categoryRepository;
+            _fileUploader = fileUploader;
+            _groupingRepository = groupingRepository;
         }
 
         public OperationResult Create(CreateCategory command)
@@ -19,8 +23,14 @@ namespace ShopManagement.Application
             var operation = new OperationResult();
             if (_categoryRepository.Exists(x => x.Name == command.Name))
                 return operation.Failde(ApplicationMessages.DuplicatedRecord);
+
             string slug = command.Slug.Slugify();
-            var categry = new Category(command.Name,command.Picture,command.PictureAlt,command.PictureTitle,command.Description,slug,command.MetaDescription,command.Keywords,command.GroupingId);
+            string slugGrouping = _groupingRepository.GetSlug(command.GroupingId);
+            string filePath = $"{slugGrouping}//{slug}";
+            var file = _fileUploader.Upload(command.Picture,filePath);
+
+            var categry = new Category(command.Name, file, command.PictureAlt,command.PictureTitle,command.Description,slug,command.MetaDescription,command.Keywords,command.GroupingId);
+            
             _categoryRepository.Create(categry);
             _categoryRepository.SaveChanges();
             return operation.Succedded();
@@ -29,13 +39,18 @@ namespace ShopManagement.Application
         public OperationResult Edit(EditCategory command)
         {
             var operation = new OperationResult();
-            var category = _categoryRepository.GetBy(command.Id);
+            var category = _categoryRepository.Get(command.Id);
+
             if (category == null)
                 return operation.Failde(ApplicationMessages.RecordNotFound);
             if (category == null)
                 return operation.Failde(ApplicationMessages.DuplicatedRecord);
+
             string slug = command.Slug.Slugify();
-            category.Edit(command.Name, command.Picture, command.PictureAlt, command.PictureTitle, command.Description, slug, command.MetaDescription, command.Keywords, command.GroupingId);
+            string filePath = $"{category.Groupings.Slug}//{slug}";
+            var file = _fileUploader.Upload(command.Picture, filePath);
+
+            category.Edit(command.Name, file, command.PictureAlt, command.PictureTitle, command.Description, slug, command.MetaDescription, command.Keywords, command.GroupingId);
             _categoryRepository.SaveChanges();
             return operation.Succedded();
         }

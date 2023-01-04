@@ -1,5 +1,7 @@
+using _0_Framework.Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,6 +28,7 @@ namespace ServiceHost
         {
             string connectionString = Configuration.GetConnectionString("ShopDb");
             ShopManagementBootstraper.Configure(services, connectionString);
+            services.AddTransient<IFileUploader, FileUploader>();
             services.AddRazorPages();
         }
 

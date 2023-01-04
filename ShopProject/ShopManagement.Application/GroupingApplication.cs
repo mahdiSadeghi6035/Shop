@@ -8,10 +8,12 @@ namespace ShopManagement.Application
     public class GroupingApplication : IGroupingApplication
     {
         private readonly IGroupingRepository _groupingRepository;
+        private readonly IFileUploader _fileUploader;
 
-        public GroupingApplication(IGroupingRepository groupingRepository)
+        public GroupingApplication(IGroupingRepository groupingRepository, IFileUploader fileUploader)
         {
             _groupingRepository = groupingRepository;
+            _fileUploader = fileUploader;
         }
 
         public OperationResult Create(CreateGrouping command)
@@ -21,7 +23,8 @@ namespace ShopManagement.Application
                 return operation.Failde(ApplicationMessages.DuplicatedRecord);
 
             string slug = command.Slug.Slugify();
-            var grouping = new Grouping(command.Name, command.Description, command.Picture, command.PictureAlt, command.PictureTitle, slug, command.Keywords, command.MetaDescription);
+            var filePath = _fileUploader.Upload(command.Picture,slug);
+            var grouping = new Grouping(command.Name, command.Description, filePath, command.PictureAlt, command.PictureTitle, slug, command.Keywords, command.MetaDescription);
             _groupingRepository.Create(grouping);
             _groupingRepository.SaveChanges();
             return operation.Succedded();
@@ -39,7 +42,8 @@ namespace ShopManagement.Application
                 return operation.Failde(ApplicationMessages.DuplicatedRecord);
 
             string slug = command.Slug.Slugify();
-            grouping.Edit(command.Name, command.Description, command.Picture, command.PictureAlt, command.PictureTitle, slug, command.Keywords, command.MetaDescription);
+            var filePath = _fileUploader.Upload(command.Picture, slug);
+            grouping.Edit(command.Name, command.Description, filePath, command.PictureAlt, command.PictureTitle, slug, command.Keywords, command.MetaDescription);
             
             _groupingRepository.SaveChanges();
             return operation.Succedded();

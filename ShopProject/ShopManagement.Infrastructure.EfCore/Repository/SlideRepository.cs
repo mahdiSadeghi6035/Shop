@@ -22,7 +22,6 @@ namespace ShopManagement.Infrastructure.EfCore.Repository
             {
                 Id = x.Id,
                 Link = x.Link,
-                Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle
             }).FirstOrDefault(x => x.Id == id);

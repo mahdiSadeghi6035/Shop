@@ -26,7 +26,6 @@ namespace ShopManagement.Infrastructure.EfCore.Repository
                 Description = x.Description,
                 Keywords = x.Keywords,
                 MetaDescription = x.MetaDescription,
-                Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 Slug = x.Slug

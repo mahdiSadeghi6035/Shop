@@ -29,10 +29,14 @@ namespace ShopManagement.Infrastructure.EfCore.Repository
                 GroupingId = x.GroupingId,
                 Keywords = x.Keywords,
                 MetaDescription = x.MetaDescription,
-                Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle
             }).FirstOrDefault(x => x.Id == id);
+        }
+
+        public Category Get(long id)
+        {
+            return _context.Categorys.Include(x => x.Groupings).FirstOrDefault(x => x.Id == id);
         }
 
         public List<ViewModelCategory> GetCategory()

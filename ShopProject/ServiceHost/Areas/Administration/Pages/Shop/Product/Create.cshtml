@@ -7,12 +7,15 @@
 
 <div class="row">
     <div class="col-12">
-        <form method="post">
+        <form method="post"
+              data-callback=""
+              data-action="Refresh"
+              enctype="multipart/form-data">
 
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label asp-for="Command.Name"  class="control-label">نام</label>
+                        <label asp-for="Command.Name" class="control-label">نام</label>
                         <input type="text" class="form-control" asp-for="Command.Name" onchange="makeSlug('Command_Name', 'Command_Slug')">
                         <span asp-validation-for="Command.Name" class="error"></span>
                     </div>
@@ -61,11 +64,10 @@
                 </div>
             </div>
             <div class="row">
-                 <div class="col-md-12">
+                <div class="col-md-12">
                     <div class="form-group">
                         <label asp-for="Command.Picture" class="control-label">عکس</label>
-                        @*<input type="file" class="form-control" asp-for="Picture" accept="image/*">*@
-                        <input type="text" class="form-control" asp-for="Command.Picture">
+                        <input type="file" class="form-control" asp-for="Command.Picture" accept="image/*">
                         <span asp-validation-for="Command.Picture" class="error"></span>
                     </div>
                 </div>
@@ -84,7 +86,7 @@
                 <div class="col-md-12">
                     <div class="form-group no-margin">
                         <label asp-for="Command.Specifications" class="control-label">مشخصات فنی</label>
-                        <textarea class="form-control autogrow" asp-for="Command.Specifications" 
+                        <textarea class="form-control autogrow" asp-for="Command.Specifications"
                                   style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
                         <span asp-validation-for="Command.Specifications" class="error"></span>
                     </div>

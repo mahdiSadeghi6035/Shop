@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
 namespace ShopManagement.Application.Contract.GroupingApp
@@ -9,7 +10,9 @@ namespace ShopManagement.Application.Contract.GroupingApp
         public string Name { get; set; }
         [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         public string Description { get; set; }
-        public string Picture { get; set; }
+        [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
+        [MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessage.maxFileSizeMessage)]
+        public IFormFile Picture { get; set; }
         public string PictureAlt { get; set; }
         public string PictureTitle { get; set; }
         [Required(ErrorMessage = ValidationMessage.RequiredMessage)]

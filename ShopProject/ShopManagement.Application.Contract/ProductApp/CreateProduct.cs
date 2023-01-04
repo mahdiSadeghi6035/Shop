@@ -1,7 +1,5 @@
 ﻿using _0_Framework.Application;
-using ShopManagement.Application.Contract.BrandApp;
-using ShopManagement.Application.Contract.CategoryApp;
-using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
 namespace ShopManagement.Application.Contract.ProductApp
@@ -9,10 +7,12 @@ namespace ShopManagement.Application.Contract.ProductApp
     public class CreateProduct
     {
         [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
+        [MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessage.maxFileSizeMessage)]
+        public IFormFile Picture { get; set; }
+        [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         public string Name { get; set; }
         [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         public string Description { get; set; }
-        public string Picture { get; set; }
         [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         public string PictureAlt { get; set; }
         [Required(ErrorMessage = ValidationMessage.RequiredMessage)]

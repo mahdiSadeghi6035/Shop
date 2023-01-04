@@ -9,5 +9,7 @@ namespace ShopManagement.Domain.CategoryAgg
         EditCategory Exists(long id);
         List<ViewModelCategory> Search(SearchModelCategory searchModel);
         List<ViewModelCategory> GetCategory();
+        Category Get(long id);
+
     }
 }

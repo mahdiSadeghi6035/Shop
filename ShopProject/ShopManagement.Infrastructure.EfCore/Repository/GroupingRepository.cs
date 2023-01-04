@@ -26,7 +26,7 @@ namespace ShopManagement.Infrastructure.EfCore.Repository
                 Description = x.Description,
                 Keywords = x.Keywords,
                 MetaDescription = x.MetaDescription,
-                Picture = x.Picture,
+                //Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 Slug = x.Slug
@@ -40,6 +40,11 @@ namespace ShopManagement.Infrastructure.EfCore.Repository
                 Id = x.Id,
                 Name = x.Name
             }).OrderByDescending(x => x.Id).ToList();
+        }
+
+        public string GetSlug(long id)
+        {
+            return _context.Groupings.Select(x => new { x.Id, x.Slug }).FirstOrDefault(x => x.Id == id)?.Slug;
         }
 
         public List<ViewModelGrouping> Search(SearchModelGrouping searchModel)
