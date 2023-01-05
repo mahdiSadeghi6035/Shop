@@ -165,6 +165,45 @@ namespace ShopManagement.Infrastructure.EfCore.Migrations
                     b.ToTable("Grouping");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.GroupingSlideAgg.GroupingSlide", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("GroupingId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PictureAlt")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PictureTitle")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GroupingId");
+
+                    b.ToTable("GroupingSlide");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
                 {
                     b.Property<long>("Id")
@@ -307,6 +346,17 @@ namespace ShopManagement.Infrastructure.EfCore.Migrations
                     b.Navigation("Groupings");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.GroupingSlideAgg.GroupingSlide", b =>
+                {
+                    b.HasOne("ShopManagement.Domain.GroupingAgg.Grouping", "Groupings")
+                        .WithMany("GroupingSlides")
+                        .HasForeignKey("GroupingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Groupings");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
                 {
                     b.HasOne("ShopManagement.Domain.BrandAgg.Brand", "Brands")
@@ -350,6 +400,8 @@ namespace ShopManagement.Infrastructure.EfCore.Migrations
             modelBuilder.Entity("ShopManagement.Domain.GroupingAgg.Grouping", b =>
                 {
                     b.Navigation("categories");
+
+                    b.Navigation("GroupingSlides");
                 });
 
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>

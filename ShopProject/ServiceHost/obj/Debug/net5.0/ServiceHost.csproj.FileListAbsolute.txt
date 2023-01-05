@@ -181,3 +181,6 @@ D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Ser
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\System.IO.Pipelines.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\GroupingSlide\Create.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\GroupingSlide\Edit.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shop\GroupingSlide\Index.cshtml.g.cs

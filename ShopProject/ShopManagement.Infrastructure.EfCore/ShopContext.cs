@@ -2,6 +2,7 @@
 using ShopManagement.Domain.BrandAgg;
 using ShopManagement.Domain.CategoryAgg;
 using ShopManagement.Domain.GroupingAgg;
+using ShopManagement.Domain.GroupingSlideAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductPictureAgg;
 using ShopManagement.Domain.SlideAgg;
@@ -17,6 +18,7 @@ namespace ShopManagement.Infrastructure.EfCore
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductPicture> ProductPictures{ get; set; }
         public DbSet<Slide> Slides{ get; set; }
+        public DbSet<GroupingSlide> GroupingSlides { get; set; }
         public ShopContext(DbContextOptions<ShopContext> options) : base(options)
         {
 

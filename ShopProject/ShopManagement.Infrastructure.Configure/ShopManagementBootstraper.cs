@@ -4,12 +4,14 @@ using ShopManagement.Application;
 using ShopManagement.Application.Contract.BrandApp;
 using ShopManagement.Application.Contract.CategoryApp;
 using ShopManagement.Application.Contract.GroupingApp;
+using ShopManagement.Application.Contract.GroupingSlideAgg;
 using ShopManagement.Application.Contract.ProductApp;
 using ShopManagement.Application.Contract.ProductPictureApp;
 using ShopManagement.Application.Contract.SlideApp;
 using ShopManagement.Domain.BrandAgg;
 using ShopManagement.Domain.CategoryAgg;
 using ShopManagement.Domain.GroupingAgg;
+using ShopManagement.Domain.GroupingSlideAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductPictureAgg;
 using ShopManagement.Domain.SlideAgg;
@@ -39,6 +41,9 @@ namespace ShopManagement.Infrastructure.Configure
 
             services.AddTransient<ISlideRepository, SlideRepository>();
             services.AddTransient<ISlideApplication, SlideApplication>();
+
+            services.AddTransient<IGroupingSlideRepository, GroupigSlideRepository>();
+            services.AddTransient<IGroupingSlideApplication, GroupingSlideApplication>();
 
             services.AddDbContext<ShopContext>(x => x.UseSqlServer(connection));
         }
