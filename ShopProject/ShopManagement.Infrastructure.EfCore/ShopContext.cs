@@ -6,6 +6,7 @@ using ShopManagement.Domain.GroupingSlideAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Domain.ProductPictureAgg;
 using ShopManagement.Domain.SlideAgg;
+using ShopManagement.Domain.VideoProductAgg;
 using ShopManagement.Infrastructure.EfCore.Mapping;
 
 namespace ShopManagement.Infrastructure.EfCore
@@ -19,6 +20,7 @@ namespace ShopManagement.Infrastructure.EfCore
         public DbSet<ProductPicture> ProductPictures{ get; set; }
         public DbSet<Slide> Slides{ get; set; }
         public DbSet<GroupingSlide> GroupingSlides { get; set; }
+        public DbSet<VideoProduct> VideoProduct{ get; set; }
         public ShopContext(DbContextOptions<ShopContext> options) : base(options)
         {
 

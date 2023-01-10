@@ -87,7 +87,7 @@
                 <div class="col-md-12">
                     <div class="form-group no-margin">
                         <label asp-for="Command.Specifications" class="control-label">مشخصات فنی</label>
-                        <textarea class="form-control autogrow" asp-for="Command.Specifications"
+                        <textarea class="form-control autogrow tiny" asp-for="Command.Specifications"
                                   style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
                         <span asp-validation-for="Command.Specifications" class="error"></span>
                     </div>
@@ -122,3 +122,23 @@
     </div>
 
 </div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="~/AdminTheme/assets/table/js.js"></script>
+
+    <script>
+        $('textarea.tiny').tinymce({
+            height: 500,
+            menubar: false,
+            plugins: [
+                'a11ychecker', 'advlist', 'advcode', 'advtable', 'autolink', 'checklist', 'export',
+                'lists', 'link', 'image', 'charmap', 'preview', 'anchor', 'searchreplace', 'visualblocks',
+                'powerpaste', 'fullscreen', 'formatpainter', 'insertdatetime', 'media', 'table', 'help', 'wordcount'
+            ],
+            toolbar: 'undo redo | a11ycheck casechange blocks | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist checklist outdent indent | removeformat | code table help'
+        });
+    </script>
+
+}

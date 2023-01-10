@@ -2,6 +2,7 @@
 using ShopManagement.Domain.BrandAgg;
 using ShopManagement.Domain.CategoryAgg;
 using ShopManagement.Domain.ProductPictureAgg;
+using ShopManagement.Domain.VideoProductAgg;
 using System.Collections.Generic;
 
 namespace ShopManagement.Domain.ProductAgg
@@ -22,6 +23,7 @@ namespace ShopManagement.Domain.ProductAgg
         public string MetaDescription { get; private set; }
         public string Keywords { get; private set; }
         public List<ProductPicture> ProductPictures{ get; private set; }
+        public List<VideoProduct> VideoProducts{ get; private set; }
 
         public Product(string name, string description, string picture, string pictureAlt, string pictureTitle,
             string specifications, long brandId, long categoryId, string slug, string metaDescription, string keywords)
@@ -38,6 +40,7 @@ namespace ShopManagement.Domain.ProductAgg
             MetaDescription = metaDescription;
             Keywords = keywords;
             ProductPictures = new List<ProductPicture>();
+            VideoProducts = new List<VideoProduct>();
         }
         public void Edit(string name, string description, string picture, string pictureAlt, string pictureTitle,
             string specifications, long brandId, long categoryId, string slug, string metaDescription, string keywords)

@@ -335,6 +335,37 @@ namespace ShopManagement.Infrastructure.EfCore.Migrations
                     b.ToTable("Slide");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.VideoProductAgg.VideoProduct", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Video")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("VideoProduct");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.CategoryAgg.Category", b =>
                 {
                     b.HasOne("ShopManagement.Domain.GroupingAgg.Grouping", "Groupings")
@@ -387,6 +418,17 @@ namespace ShopManagement.Infrastructure.EfCore.Migrations
                     b.Navigation("Products");
                 });
 
+            modelBuilder.Entity("ShopManagement.Domain.VideoProductAgg.VideoProduct", b =>
+                {
+                    b.HasOne("ShopManagement.Domain.ProductAgg.Product", "Products")
+                        .WithMany("VideoProducts")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Products");
+                });
+
             modelBuilder.Entity("ShopManagement.Domain.BrandAgg.Brand", b =>
                 {
                     b.Navigation("Products");
@@ -407,6 +449,8 @@ namespace ShopManagement.Infrastructure.EfCore.Migrations
             modelBuilder.Entity("ShopManagement.Domain.ProductAgg.Product", b =>
                 {
                     b.Navigation("ProductPictures");
+
+                    b.Navigation("VideoProducts");
                 });
 #pragma warning restore 612, 618
         }
