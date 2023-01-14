@@ -15,6 +15,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\DiscountManagement.Infrastructure.Configure\DiscountManagement.Infrastructure.Configure.csproj" />
 		<ProjectReference Include="..\ShopManagement.Infrastructure.Configure\ShopManagement.Infrastructure.Configure.csproj" />
 	</ItemGroup>
 
