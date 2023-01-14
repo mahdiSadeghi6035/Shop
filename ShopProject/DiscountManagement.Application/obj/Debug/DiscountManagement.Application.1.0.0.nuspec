@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DiscountManagement.Application</id>
+    <version>1.0.0</version>
+    <authors>DiscountManagement.Application</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Programming\Back End\ShopProject\ShopProject\DiscountManagement.Application\bin\Debug\net5.0\DiscountManagement.Application.dll" target="lib\net5.0\DiscountManagement.Application.dll" />
+  </files>
+</package>
