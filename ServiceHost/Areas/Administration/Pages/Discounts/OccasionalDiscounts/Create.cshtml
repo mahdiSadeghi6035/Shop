@@ -1,0 +1,122 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.Discounts.OccasionalDiscounts.CreateModel
+@{
+    ViewData["Title"] = "تعریف تخفیف جدید";
+}
+
+
+<div class="row">
+    <div class="col-12">
+        <form method="post"
+              data-callback=""
+              data-action="Refresh"
+              enctype="multipart/form-data">
+
+            <div class="row">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Command.Rate" class="control-label">درصد تخفیف</label>
+                            <input type="number" class="form-control" asp-for="Command.Rate">
+                            <span asp-validation-for="Command.Rate" class="error"></span>
+                        </div>
+                    </div><div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Command.Title" class="control-label">عنوان</label>
+                            <input type="text" class="form-control" asp-for="Command.Title">
+                            <span asp-validation-for="Command.Title" class="error"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Command.StartDate" class="control-label">تاریخ شروع</label>
+                            <input class="form-control persianDateInput" asp-for="Command.StartDate">
+                            <span asp-validation-for="Command.StartDate" class="error"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Command.EndDate" class="control-label">تاریخ پایان</label>
+                            <input class="form-control persianDateInput" asp-for="Command.EndDate">
+                            <span asp-validation-for="Command.EndDate" class="error"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="control-label col-md-3">انتخاب محصولات</label>
+                        <select asp-items="Model.SelectLists" asp-for="Command.OccasionalId" class="multi-select" multiple="multiple" id="my_multi_select3">
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-default waves-effect" asp-page="./Index">بستن</button>
+                <button type="submit" class="btn btn-info waves-effect waves-light">تایید</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+
+@section Css{
+    <link href="~/AdminTheme/assets/jquery-multi-select/multi-select.css" rel="stylesheet" type="text/css" />
+}
+
+
+    @section Scripts{
+
+    <script type="text/javascript" src="~/AdminTheme/assets/jquery-multi-select/jquery.multi-select.js"></script>
+    <script type="text/javascript" src="~/AdminTheme/assets/jquery-multi-select/jquery.quicksearch.js"></script>
+
+    <script>
+        jQuery(document).ready(function() {
+            $('#my_multi_select3').multiSelect({
+                selectableOptgroup: true,
+                selectableHeader:
+                    "<input type='text' class='form-control search-input' autocomplete='off' placeholder='جستجو...'>",
+                selectionHeader:
+                    "<input type='text' class='form-control search-input' autocomplete='off' placeholder='جستجو...'>",
+                afterInit: function(ms) {
+                    var that = this,
+                        $selectableSearch = that.$selectableUl.prev(),
+                        $selectionSearch = that.$selectionUl.prev(),
+                        selectableSearchString =
+                            '#' + that.$container.attr('id') + ' .ms-elem-selectable:not(.ms-selected)',
+                        selectionSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selection.ms-selected';
+
+                    that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
+                        .on('keydown',
+                            function(e) {
+                                if (e.which === 40) {
+                                    that.$selectableUl.focus();
+                                    return false;
+                                }
+                            });
+
+                    that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
+                        .on('keydown',
+                            function(e) {
+                                if (e.which == 40) {
+                                    that.$selectionUl.focus();
+                                    return false;
+                                }
+                            });
+                },
+                afterSelect: function() {
+                    this.qs1.cache();
+                    this.qs2.cache();
+                },
+                afterDeselect: function() {
+                    this.qs1.cache();
+                    this.qs2.cache();
+                }
+            });
+        });
+    </script>
+}

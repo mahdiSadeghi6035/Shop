@@ -1,0 +1,56 @@
+﻿
+<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+        <div class="user-details">
+            <div class="pull-right">
+                <img src="~/AdminTheme/images/avatar-1.jpg" alt="" class="thumb-md img-circle">
+            </div>
+            <div class="user-info">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">علی رضایی<span class="caret"></span></a>
+
+                </div>
+
+                <p class="text-muted m-0">مدیر سیستم</p>
+            </div>
+        </div>
+        <!--- Divider -->
+        <div id="sidebar-menu">
+            <ul>
+
+                <li>
+                    <a asp-page="/Index" class="waves-effect active"><i class="md md-home"></i><span> داشبورد </span></a>
+                </li>
+
+                <li class="has_sub">
+                    <a class="waves-effect"><i class="md md-mail"></i><span> فروشگاه</span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a asp-page="/Shop/Grouping/Index">دسته بندی محصولات</a></li>
+                        <li><a asp-page="/Shop/Category/Index">گروه محصولات</a></li>
+                        <li><a asp-page="/Shop/Brand/Index">برند</a></li>
+                        <li><a asp-page="/Shop/Product/Index">محصولات</a></li>
+                        <li><a asp-page="/Shop/ProductPicture/Index">عکس محصولات</a></li>
+                        <li><a asp-page="/Shop/VideoProduct/Index">فیلم محصولات</a></li>
+                        <li><a asp-page="/Shop/Slide/Index">اسلاید</a></li>
+                        <li><a asp-page="/Shop/GroupingSlide/Index">اسلاید دسته بندی محصولات</a></li>
+                    </ul>
+                </li>
+                <li class="has_sub">
+                    <a class="waves-effect"><i class="md md-mail"></i><span> مدیریت تخفیفات</span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <ul class="list-unstyled">
+                        <li><a asp-page="/Discounts/Discount/Index">تخفیفات</a></li>
+                        <li><a asp-page="/Discounts/OccasionalDiscounts/Index">تخفیفات گروهی</a></li>
+                    </ul>
+                </li>
+
+               
+
+                <li>
+                    <a asp-page="/Accounts" asp-page-handler="LogOut" class="waves-effect"><i class="fa fa-sign-out"></i><span> خروج </span></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
