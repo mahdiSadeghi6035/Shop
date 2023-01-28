@@ -8,7 +8,7 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Brand
     public class IndexModel : PageModel
     {
         private readonly IBrandApplication _brandApplication;
-        public List<ViewModelBrand> Brand{ get; set; }
+        public List<ViewModelBrand> Brand { get; set; }
         public SearchModelBrand SearchModel { get; set; }
         public IndexModel(IBrandApplication brandApplication)
         {
@@ -30,13 +30,18 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Brand
         }
         public IActionResult OnGetEdit(long id)
         {
+
             var brand = _brandApplication.GetEdit(id);
-            return Partial("./Edit",brand);
+            return Partial("./Edit", brand);
         }
         public JsonResult OnPostEdit(EditBrand command)
         {
-            var result = _brandApplication.Edit(command);
-            return new JsonResult(result);
+            if (ModelState.IsValid)
+            {
+                var result = _brandApplication.Edit(command);
+                return new JsonResult(result);
+            }
+            return null;
         }
     }
 }

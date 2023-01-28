@@ -8,8 +8,8 @@ namespace ShopManagement.Application.Contract.ProductPictureApp
 {
     public class CreateProductPicture
     {
-        [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         [MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessage.maxFileSizeMessage)]
+        [FileExtentionLimitation(new string[] { ".jpeg", ".jpg", ".png" }, ErrorMessage = ValidationMessage.ExtentionMessage)]
         public IFormFile Picture { get; set; }
         [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         public string PictureAlt { get; set; }

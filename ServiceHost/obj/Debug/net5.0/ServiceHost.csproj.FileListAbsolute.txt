@@ -120,6 +120,11 @@ D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\Dis
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\DiscountManagement.Domain.dll
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\DiscountManagement.Infrastructure.Configure.dll
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\DiscountManagement.Infrastructure.EfCore.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\InventoryManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\InventoryManagement.Infrastructure.Configure.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\InventoryManagement.Infrastructure.EfCore.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\InventoryManagmenet.Application.dll
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\ShopManagement.Application.Contract.dll
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\ShopManagement.Application.dll
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\ShopManagement.Domain.dll
@@ -127,11 +132,16 @@ D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\Sho
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.EfCore.dll
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\_0_Framework.dll
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\DiscountManagement.Infrastructure.Configure.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\InventoryManagement.Infrastructure.Configure.pdb
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\ShopManagement.Infrastructure.Configure.pdb
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.pdb
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\DiscountManagement.Application.Contract.pdb
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\DiscountManagement.Domain.pdb
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\DiscountManagement.Infrastructure.EfCore.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\InventoryManagement.Application.Contract.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\InventoryManagement.Domain.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\InventoryManagement.Infrastructure.EfCore.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\InventoryManagmenet.Application.pdb
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\ShopManagement.Application.pdb
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\ShopManagement.Application.Contract.pdb
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\ShopManagement.Domain.pdb
@@ -154,6 +164,8 @@ D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Ser
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\Discount\Create.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\Discount\Edit.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\Discount\Index.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\OccasionalDiscounts\Create.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\OccasionalDiscounts\Edit.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\OccasionalDiscounts\Index.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Index.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Shared\_AdminLayout.cshtml.g.cs
@@ -202,5 +214,3 @@ D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\ref
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\ServiceHost.pdb
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\ServiceHost.genruntimeconfig.cache
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\ref\ServiceHost.dll
-D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\OccasionalDiscounts\Create.cshtml.g.cs
-D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\OccasionalDiscounts\Edit.cshtml.g.cs

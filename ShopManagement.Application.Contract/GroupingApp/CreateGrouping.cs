@@ -10,8 +10,8 @@ namespace ShopManagement.Application.Contract.GroupingApp
         public string Name { get; set; }
         [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         public string Description { get; set; }
-        [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         [MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessage.maxFileSizeMessage)]
+        [FileExtentionLimitation(new string[] { ".jpeg", ".jpg", ".png" }, ErrorMessage = ValidationMessage.ExtentionMessage)]
         public IFormFile Picture { get; set; }
         public string PictureAlt { get; set; }
         public string PictureTitle { get; set; }
