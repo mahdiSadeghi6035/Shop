@@ -30,6 +30,24 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
             }).FirstOrDefault(x => x.Id == id);
         }
 
+        public List<InventoryOpereation> Log(long id)
+        {
+            var inventory = _context.Inventory.FirstOrDefault(x => x.Id == id);
+            if (inventory == null)
+                return null;
+            return inventory.InventoryOperation.Select(x => new InventoryOpereation
+            {
+                Id = x.Id,
+                InventoryId = x.InventoryId,
+                Count = x.Count,
+                CurrentCount = x.CurrentCount,
+                Description = x.Description,
+                Operation = x.Operation,
+                OperationDate = x.OperationDate.ToFarsi(),
+               OperatorId = 0
+            }).OrderByDescending(x => x.Id).ToList();
+        }
+
         public List<ViewModelInventory> Search(SearchModelInventory searchModel)
         {
             var query = _context.Inventory.Select(x => new ViewModelInventory
@@ -42,7 +60,7 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
                 UnitPrice = x.UnitPrice,
                 CurrentCount = x.CalculateCurrentCount()
             });
-            var product = _shopContext.Products.Select(x => new { x.Id, x.Name}).ToList();
+            var product = _shopContext.Products.Select(x => new { x.Id, x.Name }).ToList();
             if (searchModel.InStock)
                 query = query.Where(x => x.InStock);
             if (searchModel.ProductId > 0)
@@ -51,7 +69,7 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
             var inventory = query.OrderByDescending(x => x.Id).ToList();
 
             inventory.ForEach(i => i.Product = product.FirstOrDefault(x => x.Id == i.ProductId)?.Name);
-            
+
             return inventory;
         }
     }

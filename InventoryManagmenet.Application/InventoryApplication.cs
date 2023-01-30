@@ -46,7 +46,7 @@ namespace InventoryManagmenet.Application
         public OperationResult Increase(OperationInventoryModel command)
         {
             var operation = new OperationResult();
-            var inventory = _inventoryRepository.GetBy(command.InvnetoryId);
+            var inventory = _inventoryRepository.GetBy(command.InventoryId);
             if (inventory == null)
                 return operation.Failde(ApplicationMessages.RecordNotFound);
             inventory.Increase(command.Count, command.Description, 0);
@@ -54,10 +54,15 @@ namespace InventoryManagmenet.Application
             return operation.Succedded();
         }
 
+        public List<InventoryOpereation> Log(long id)
+        {
+            return _inventoryRepository.Log(id);
+        }
+
         public OperationResult Reduce(OperationInventoryModel command)
         {
             var operation = new OperationResult();
-            var inventory = _inventoryRepository.GetBy(command.InvnetoryId);
+            var inventory = _inventoryRepository.GetBy(command.InventoryId);
             if (inventory == null)
                 return operation.Failde(ApplicationMessages.RecordNotFound);
             inventory.Reduce(command.Count, command.Description, 0);
@@ -70,7 +75,7 @@ namespace InventoryManagmenet.Application
             var operation = new OperationResult();
             foreach (var item in command)
             {
-                var inventory = _inventoryRepository.GetBy(item.InvnetoryId);
+                var inventory = _inventoryRepository.GetBy(item.InventoryId);
                 if (inventory == null)
                     return operation.Failde(ApplicationMessages.RecordNotFound);
                 inventory.Reduce(item.Count, item.Description, 0);

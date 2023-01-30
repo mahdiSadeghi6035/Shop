@@ -8,5 +8,6 @@ namespace InventoryManagement.Domain.InventoryAgg
     {
         EditInventory GetEdit(long id);
         List<ViewModelInventory> Search(SearchModelInventory searchModel);
+        List<InventoryOpereation> Log(long id);
     }
 }

@@ -12,5 +12,6 @@ namespace InventoryManagement.Application.Contract.InventoryApp
         OperationResult Increase(OperationInventoryModel command);
         OperationResult Reduce(OperationInventoryModel command);
         OperationResult Reduce(List<OperationInventoryModel> command);
+        List<InventoryOpereation> Log(long id);
     }
 }
