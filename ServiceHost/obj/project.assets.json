@@ -2093,6 +2093,78 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "ArticleManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ArticleManagement.Application.Contract": "1.0.0",
+          "ArticleManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ArticleManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArticleManagement.Application.dll": {}
+        }
+      },
+      "ArticleManagement.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "_0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ArticleManagement.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArticleManagement.Application.Contract.dll": {}
+        }
+      },
+      "ArticleManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ArticleManagement.Application.Contract": "1.0.0",
+          "_0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ArticleManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArticleManagement.Domain.dll": {}
+        }
+      },
+      "ArticleManagement.Infrastructure.Configure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ArticleManagement.Application": "1.0.0",
+          "ArticleManagement.Domain": "1.0.0",
+          "ArticleManagement.Infrastructure.EfCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ArticleManagement.Infrastructure.Configure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArticleManagement.Infrastructure.Configure.dll": {}
+        }
+      },
+      "ArticleManagement.Infrastructure.EfCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ArticleManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ArticleManagement.Infrastructure.EfCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArticleManagement.Infrastructure.EfCore.dll": {}
+        }
+      },
       "DiscountManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -7583,6 +7655,31 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "ArticleManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../ArticleManagement.Application/ArticleManagement.Application.csproj",
+      "msbuildProject": "../ArticleManagement.Application/ArticleManagement.Application.csproj"
+    },
+    "ArticleManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../ArticleManagement.Application.Contract/ArticleManagement.Application.Contract.csproj",
+      "msbuildProject": "../ArticleManagement.Application.Contract/ArticleManagement.Application.Contract.csproj"
+    },
+    "ArticleManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ArticleManagement.Domain/ArticleManagement.Domain.csproj",
+      "msbuildProject": "../ArticleManagement.Domain/ArticleManagement.Domain.csproj"
+    },
+    "ArticleManagement.Infrastructure.Configure/1.0.0": {
+      "type": "project",
+      "path": "../ArticleManagement.Infrastructure.Configure/ArticleManagement.Infrastructure.Configure.csproj",
+      "msbuildProject": "../ArticleManagement.Infrastructure.Configure/ArticleManagement.Infrastructure.Configure.csproj"
+    },
+    "ArticleManagement.Infrastructure.EfCore/1.0.0": {
+      "type": "project",
+      "path": "../ArticleManagement.Infrastructure.EfCore/ArticleManagement.Infrastructure.EfCore.csproj",
+      "msbuildProject": "../ArticleManagement.Infrastructure.EfCore/ArticleManagement.Infrastructure.EfCore.csproj"
+    },
     "DiscountManagement.Application/1.0.0": {
       "type": "project",
       "path": "../DiscountManagement.Application/DiscountManagement.Application.csproj",
@@ -7666,6 +7763,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "ArticleManagement.Infrastructure.Configure >= 1.0.0",
       "DiscountManagement.Infrastructure.Configure >= 1.0.0",
       "InventoryManagement.Infrastructure.Configure >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
@@ -7702,6 +7800,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\Programming\\Back End\\ShopProject\\ShopProject\\ArticleManagement.Infrastructure.Configure\\ArticleManagement.Infrastructure.Configure.csproj": {
+              "projectPath": "D:\\Programming\\Back End\\ShopProject\\ShopProject\\ArticleManagement.Infrastructure.Configure\\ArticleManagement.Infrastructure.Configure.csproj"
+            },
             "D:\\Programming\\Back End\\ShopProject\\ShopProject\\DiscountManagement.Infrastructure.Configure\\DiscountManagement.Infrastructure.Configure.csproj": {
               "projectPath": "D:\\Programming\\Back End\\ShopProject\\ShopProject\\DiscountManagement.Infrastructure.Configure\\DiscountManagement.Infrastructure.Configure.csproj"
             },

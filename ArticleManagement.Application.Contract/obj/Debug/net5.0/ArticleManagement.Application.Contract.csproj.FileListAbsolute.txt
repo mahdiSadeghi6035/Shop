@@ -1,0 +1,15 @@
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\bin\Debug\net5.0\ArticleManagement.Application.Contract.deps.json
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\bin\Debug\net5.0\ArticleManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\bin\Debug\net5.0\ArticleManagement.Application.Contract.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\bin\Debug\net5.0\_0_Framework.dll
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\bin\Debug\net5.0\_0_Framework.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\obj\Debug\net5.0\ArticleManagement.Application.Contract.csproj.AssemblyReference.cache
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\obj\Debug\net5.0\ArticleManagement.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\obj\Debug\net5.0\ArticleManagement.Application.Contract.AssemblyInfoInputs.cache
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\obj\Debug\net5.0\ArticleManagement.Application.Contract.AssemblyInfo.cs
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\obj\Debug\net5.0\ArticleManagement.Application.Contract.csproj.CoreCompileInputs.cache
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\obj\Debug\net5.0\ArticleManagement.Application.Contract.csproj.CopyComplete
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\obj\Debug\net5.0\ArticleManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\obj\Debug\net5.0\refint\ArticleManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\obj\Debug\net5.0\ArticleManagement.Application.Contract.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Application.Contract\obj\Debug\net5.0\ref\ArticleManagement.Application.Contract.dll

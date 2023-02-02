@@ -1,0 +1,17 @@
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\bin\Debug\net5.0\ArticleManagement.Domain.deps.json
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\bin\Debug\net5.0\ArticleManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\bin\Debug\net5.0\ArticleManagement.Domain.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\bin\Debug\net5.0\ArticleManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\bin\Debug\net5.0\_0_Framework.dll
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\bin\Debug\net5.0\ArticleManagement.Application.Contract.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\bin\Debug\net5.0\_0_Framework.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\obj\Debug\net5.0\ArticleManagement.Domain.csproj.AssemblyReference.cache
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\obj\Debug\net5.0\ArticleManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\obj\Debug\net5.0\ArticleManagement.Domain.AssemblyInfoInputs.cache
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\obj\Debug\net5.0\ArticleManagement.Domain.AssemblyInfo.cs
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\obj\Debug\net5.0\ArticleManagement.Domain.csproj.CoreCompileInputs.cache
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\obj\Debug\net5.0\ArticleManagement.Domain.csproj.CopyComplete
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\obj\Debug\net5.0\ArticleManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\obj\Debug\net5.0\refint\ArticleManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\obj\Debug\net5.0\ArticleManagement.Domain.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ArticleManagement.Domain\obj\Debug\net5.0\ref\ArticleManagement.Domain.dll
