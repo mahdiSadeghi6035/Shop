@@ -1,4 +1,6 @@
 ﻿using _0_Framework.Domain;
+using ArticleManagement.Domain.ArticleAgg;
+using System.Collections.Generic;
 
 namespace ArticleManagement.Domain.ArticleCategoryAgg
 {
@@ -9,6 +11,7 @@ namespace ArticleManagement.Domain.ArticleCategoryAgg
         public string KeyWords { get; private set; }
         public string MetaDescription { get; private set; }
         public string CanonicalAddress { get; private set; }
+        public List<Article> Articles{ get; private set; }
 
         public ArticleCategory(string name, string slug, string keyWords, string metaDescription, string canonicalAddress)
         {
@@ -17,6 +20,7 @@ namespace ArticleManagement.Domain.ArticleCategoryAgg
             KeyWords = keyWords;
             MetaDescription = metaDescription;
             CanonicalAddress = canonicalAddress;
+            Articles = new List<Article>();
         }
         public void Edit(string name, string slug, string keyWords, string metaDescription, string canonicalAddress)
         {

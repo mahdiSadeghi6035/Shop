@@ -29,6 +29,11 @@ namespace ArticleManagement.Infrastructure.EfCore.Repository
             }).FirstOrDefault(x => x.Id == id);
         }
 
+        public string GetSlug(long id)
+        {
+            return _context.ArticleCategory.FirstOrDefault(x => x.Id == id)?.Slug;
+        }
+
         public List<ViewModelArticleCategory> Search(SearchModelArtilceCategory searchModel)
         {
             var articleCategory = _context.ArticleCategory.Select(x => new ViewModelArticleCategory

@@ -14,6 +14,8 @@ namespace ArticleManagement.Infrastructure.EfCore.Mapping
             builder.Property(x => x.Slug).IsRequired();
             builder.Property(x => x.KeyWords).IsRequired();
             builder.Property(x => x.MetaDescription).IsRequired();
+
+            builder.HasMany(x => x.Articles).WithOne(x => x.ArticleCategorys).HasForeignKey(x => x.ArticleCategoryId);
         }
     }
 }
