@@ -16,6 +16,15 @@ namespace ArticleManagement.Infrastructure.EfCore.Repository
             _context = context;
         }
 
+        public List<ViewModelArticleCategory> GetArticleCategory()
+        {
+            return _context.ArticleCategory.Select(x => new ViewModelArticleCategory
+            {
+                Id = x.Id,
+                Name = x.Name
+            }).OrderByDescending(x => x.Id).ToList();
+        }
+
         public EditArticleCategory GetEdit(long id)
         {
             return _context.ArticleCategory.Select(x => new EditArticleCategory

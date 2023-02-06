@@ -233,3 +233,6 @@ D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\Art
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\ArticleCategory\Create.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\ArticleCategory\Edit.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\ArticleCategory\Index.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\Article\Create.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\Article\Edit.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\Article\Index.cshtml.g.cs

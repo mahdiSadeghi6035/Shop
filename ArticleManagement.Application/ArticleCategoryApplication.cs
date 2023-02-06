@@ -41,6 +41,11 @@ namespace ArticleManagement.Application
             return operation.Succedded();
         }
 
+        public List<ViewModelArticleCategory> GetArticleCategory()
+        {
+            return _articleCategoryRepository.GetArticleCategory();
+        }
+
         public EditArticleCategory GetEdit(long id)
         {
             return _articleCategoryRepository.GetEdit(id);

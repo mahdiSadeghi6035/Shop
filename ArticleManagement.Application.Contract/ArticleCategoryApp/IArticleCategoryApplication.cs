@@ -9,5 +9,6 @@ namespace ArticleManagement.Application.Contract.ArticleCategoryApp
         OperationResult Edit(EditArticleCategory command);
         EditArticleCategory GetEdit(long id);
         List<ViewModelArticleCategory> Search(SearchModelArtilceCategory searchModel);
+        List<ViewModelArticleCategory> GetArticleCategory();
     }
 }
