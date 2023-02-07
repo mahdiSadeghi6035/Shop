@@ -113,6 +113,38 @@ namespace ArticleManagement.Infrastructure.EfCore.Migrations
                     b.ToTable("ArticleCategory");
                 });
 
+            modelBuilder.Entity("ArticleManagement.Domain.VideoCategoryAgg.VideoCategory", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("KeyWords")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("VideoCategory");
+                });
+
             modelBuilder.Entity("ArticleManagement.Domain.ArticleAgg.Article", b =>
                 {
                     b.HasOne("ArticleManagement.Domain.ArticleCategoryAgg.ArticleCategory", "ArticleCategorys")

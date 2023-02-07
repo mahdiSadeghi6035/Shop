@@ -236,3 +236,6 @@ D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Raz
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\Article\Create.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\Article\Edit.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\Article\Index.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\VideoCategory\Create.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\VideoCategory\Edit.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\VideoCategory\Index.cshtml.g.cs

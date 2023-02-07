@@ -1,5 +1,6 @@
 ﻿using ArticleManagement.Domain.ArticleAgg;
 using ArticleManagement.Domain.ArticleCategoryAgg;
+using ArticleManagement.Domain.VideoCategoryAgg;
 using ArticleManagement.Infrastructure.EfCore.Mapping;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,6 +11,7 @@ namespace ArticleManagement.Infrastructure.EfCore
     {
         public DbSet<ArticleCategory> ArticleCategory{ get; set; }
         public DbSet<Article> Article{ get; set; }
+        public DbSet<VideoCategory> VideoCategory{ get; set; }
         public ArticleContext(DbContextOptions<ArticleContext> options) : base(options)
         {
         }
