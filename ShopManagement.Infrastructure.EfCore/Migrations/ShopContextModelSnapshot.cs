@@ -217,6 +217,9 @@ namespace ShopManagement.Infrastructure.EfCore.Migrations
                     b.Property<long>("CategoryId")
                         .HasColumnType("bigint");
 
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 

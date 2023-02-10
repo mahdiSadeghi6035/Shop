@@ -65,11 +65,18 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label asp-for="Command.Picture" class="control-label">عکس</label>
                         <input type="file" class="form-control" asp-for="Command.Picture" accept="image/*">
                         <span asp-validation-for="Command.Picture" class="error"></span>
+                    </div>
+                </div>
+                 <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Command.Code" class="control-label">کد محصول</label>
+                        <input type="text" class="form-control" asp-for="Command.Code">
+                        <span asp-validation-for="Command.Code" class="error"></span>
                     </div>
                 </div>
             </div>

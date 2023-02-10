@@ -36,7 +36,8 @@ namespace ShopManagement.Infrastructure.EfCore.Repository
                 Name = x.Name,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
-                Specifications = x.Specifications
+                Specifications = x.Specifications,
+                Code = x.Code
             }).FirstOrDefault(x => x.Id == id);
         }
 

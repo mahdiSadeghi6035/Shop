@@ -28,7 +28,7 @@ namespace ShopManagement.Application
             var category = _categoryRepository.Get(command.CategoryId);
             var path = $"{category.Groupings.Slug}//{category.Slug}//{slug}";
             var file = _fileUploader.Upload(command.Picture, path);
-            var product = new Product(command.Name, command.Description, file, command.PictureAlt, command.PictureTitle, command.Specifications, command.BrandId, command.CategoryId, slug, command.MetaDescription, command.Keywords);
+            var product = new Product(command.Name, command.Description, file, command.PictureAlt, command.PictureTitle, command.Specifications, command.BrandId, command.CategoryId, slug, command.MetaDescription, command.Keywords, command.Code);
 
             _productRepository.Create(product);
             _productRepository.SaveChanges();
@@ -48,7 +48,7 @@ namespace ShopManagement.Application
             var path = $"{product.Categorys.Groupings.Slug}//{product.Categorys.Slug}//{slug}";
             var file = _fileUploader.Upload(command.Picture, path);
 
-            product.Edit(command.Name, command.Description, file, command.PictureAlt, command.PictureTitle, command.Specifications, command.BrandId, command.CategoryId, slug, command.MetaDescription, command.Keywords);
+            product.Edit(command.Name, command.Description, file, command.PictureAlt, command.PictureTitle, command.Specifications, command.BrandId, command.CategoryId, slug, command.MetaDescription, command.Keywords, command.Code);
             _productRepository.SaveChanges();
             return operation.Succedded();
         }

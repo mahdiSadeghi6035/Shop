@@ -28,5 +28,7 @@ namespace ShopManagement.Application.Contract.ProductApp
         [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         public string MetaDescription { get; set; }
         public string Keywords { get; set; }
+        [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
+        public string Code { get; set; }
     }
 }
