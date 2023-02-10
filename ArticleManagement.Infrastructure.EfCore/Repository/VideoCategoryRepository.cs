@@ -28,6 +28,11 @@ namespace ArticleManagement.Infrastructure.EfCore.Repository
             }).FirstOrDefault(x => x.Id == id);
         }
 
+        public string GetSlug(long id)
+        {
+            return _context.VideoCategory.FirstOrDefault(x => x.Id == id)?.Slug;
+        }
+
         public List<ViewModelVideoCategory> GetVideoCategory()
         {
             return _context.VideoCategory.Select(x => new ViewModelVideoCategory

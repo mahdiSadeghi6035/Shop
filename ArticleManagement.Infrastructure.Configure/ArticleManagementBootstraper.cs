@@ -1,9 +1,11 @@
 ﻿using ArticleManagement.Application;
 using ArticleManagement.Application.Contract.ArticleApp;
 using ArticleManagement.Application.Contract.ArticleCategoryApp;
+using ArticleManagement.Application.Contract.VideoApp;
 using ArticleManagement.Application.Contract.VideoCategoryApp;
 using ArticleManagement.Domain.ArticleAgg;
 using ArticleManagement.Domain.ArticleCategoryAgg;
+using ArticleManagement.Domain.VideoAgg;
 using ArticleManagement.Domain.VideoCategoryAgg;
 using ArticleManagement.Infrastructure.EfCore;
 using ArticleManagement.Infrastructure.EfCore.Repository;
@@ -24,6 +26,9 @@ namespace ArticleManagement.Infrastructure.Configure
 
             services.AddTransient<IVideoCategoryRepository, VideoCategoryRepository>();
             services.AddTransient<IVideoCategoryApplication, VideoCategoryApplication>();
+
+            services.AddTransient<IVideoRepository, VideoRepository>();
+            services.AddTransient<IVideoApplication, VideoApplication>();
 
             services.AddDbContext<ArticleContext>(x => x.UseSqlServer(connection));
         }

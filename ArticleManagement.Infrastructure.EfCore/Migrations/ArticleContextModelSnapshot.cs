@@ -113,6 +113,66 @@ namespace ArticleManagement.Infrastructure.EfCore.Migrations
                     b.ToTable("ArticleCategory");
                 });
 
+            modelBuilder.Entity("ArticleManagement.Domain.VideoAgg.Video", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("KeyWords")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PictureAlt")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PictureTitle")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("VideoCategoryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Videos")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("VideoCategoryId");
+
+                    b.ToTable("Video");
+                });
+
             modelBuilder.Entity("ArticleManagement.Domain.VideoCategoryAgg.VideoCategory", b =>
                 {
                     b.Property<long>("Id")
@@ -156,9 +216,25 @@ namespace ArticleManagement.Infrastructure.EfCore.Migrations
                     b.Navigation("ArticleCategorys");
                 });
 
+            modelBuilder.Entity("ArticleManagement.Domain.VideoAgg.Video", b =>
+                {
+                    b.HasOne("ArticleManagement.Domain.VideoCategoryAgg.VideoCategory", "VideoCategory")
+                        .WithMany("Video")
+                        .HasForeignKey("VideoCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("VideoCategory");
+                });
+
             modelBuilder.Entity("ArticleManagement.Domain.ArticleCategoryAgg.ArticleCategory", b =>
                 {
                     b.Navigation("Articles");
+                });
+
+            modelBuilder.Entity("ArticleManagement.Domain.VideoCategoryAgg.VideoCategory", b =>
+                {
+                    b.Navigation("Video");
                 });
 #pragma warning restore 612, 618
         }

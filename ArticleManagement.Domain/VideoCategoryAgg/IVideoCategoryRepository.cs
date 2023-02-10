@@ -9,5 +9,6 @@ namespace ArticleManagement.Domain.VideoCategoryAgg
         EditVideoCategory GetEdit(long id);
         List<ViewModelVideoCategory> Search(SearchModelVideoCategory searchModel);
         List<ViewModelVideoCategory> GetVideoCategory();
+        string GetSlug(long id);
     }
 }
