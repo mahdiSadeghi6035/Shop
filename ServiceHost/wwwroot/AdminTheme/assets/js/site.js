@@ -198,7 +198,22 @@ jQuery.validator.unobtrusive.adapters.addBool("maxFileSize");
 
 jQuery.validator.addMethod("ExtentionMessage",
     function (value, element, params) {
-        
+        var file = element.files[0].type;
+        var typefile = file.split("/");
+        var listType = ["jpeg", "jpg", "png"];
+        for (var i = 1; i < typefile.length; i++) {
+            var files = typefile[i];
+            for (var t = 0; t < listType.length; t++) {
+                var getListType = listType[t];
+                if (files == getListType) {
+                    return true;
+                    break;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
     });
 jQuery.validator.unobtrusive.adapters.addBool("ExtentionMessage");
 
