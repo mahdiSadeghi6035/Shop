@@ -10,7 +10,7 @@ namespace ShopManagement.Application.Contract.BrandApp
         public string Name { get; set; }
         [MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessage.maxFileSizeMessage)]
         [FileExtentionLimitation(new string[] { ".jpeg", ".jpg", ".png" }, ErrorMessage = ValidationMessage.ExtentionMessage)]
-        public IFormFile Picture { get; set; }
+        public IFormFile? Picture { get; set; }
         [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         public string PictureAlt { get; set; }
         [Required(ErrorMessage = ValidationMessage.RequiredMessage)]

@@ -82,10 +82,13 @@
                 </div>
             </div>
         </div>
-        <input type="hidden" asp-for="Id" value="@Model.Id"/>
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
         <button type="submit" class="btn btn-info waves-effect waves-light">ویرایش</button>
     </div>
 </form>
+
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

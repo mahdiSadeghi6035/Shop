@@ -39,6 +39,12 @@ namespace InventoryManagement.Infrastructure.EfCore.Migrations
                     b.Property<long>("ProductId")
                         .HasColumnType("bigint");
 
+                    b.Property<double>("PurchasePrice")
+                        .HasColumnType("float");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
                     b.Property<double>("UnitPrice")
                         .HasColumnType("float");
 

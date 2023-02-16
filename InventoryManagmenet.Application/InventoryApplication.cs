@@ -17,9 +17,7 @@ namespace InventoryManagmenet.Application
         public OperationResult Create(CreateInventory command)
         {
             var operation = new OperationResult();
-            if (_inventoryRepository.Exists(x => x.Color == command.Color))
-                return operation.Failde(ApplicationMessages.DuplicatedRecord);
-            var inventory = new Inventory(command.ProductId, command.Color, command.UnitPrice);
+            var inventory = new Inventory(command.ProductId, command.Color, command.UnitPrice, command.PurchasePrice, command.Status);
             _inventoryRepository.Create(inventory);
             _inventoryRepository.SaveChanges();
             return operation.Succedded();
@@ -31,9 +29,7 @@ namespace InventoryManagmenet.Application
             var inventory = _inventoryRepository.GetBy(command.Id);
             if (inventory == null)
                 return operation.Failde(ApplicationMessages.DuplicatedRecord);
-            if (_inventoryRepository.Exists(x => x.Color == command.Color && x.Id != command.Id))
-                return operation.Failde(ApplicationMessages.DuplicatedRecord);
-            inventory.Edit(command.ProductId, command.Color, command.UnitPrice);
+            inventory.Edit(command.ProductId, command.Color, command.UnitPrice, command.PurchasePrice, command.Status);
             _inventoryRepository.SaveChanges();
             return operation.Succedded();
         }

@@ -18,7 +18,7 @@ namespace _0_Framework.Application
             var file = value as IFormFile;
             if (file == null)
                 return false;
-            return file.Length <= _maxFileSize;
+            return file.Length >= _maxFileSize;
         }
 
         public void AddValidation(ClientModelValidationContext context)

@@ -4,5 +4,6 @@
     {
         public long ProductId { get; set; }
         public bool InStock{ get; set; }
+        public bool Status{ get; set; }
     }
 }

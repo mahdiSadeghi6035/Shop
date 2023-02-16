@@ -168,3 +168,7 @@
     -o-transform: scale(2);
     transform: scale(2);
 }
+.check-box {
+    margin-top: 34px;
+    margin-right: 25px;
+}

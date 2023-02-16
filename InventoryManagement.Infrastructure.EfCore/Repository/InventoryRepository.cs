@@ -26,7 +26,9 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
                 Id = x.Id,
                 Color = x.Color,
                 ProductId = x.ProductId,
-                UnitPrice = x.UnitPrice
+                UnitPrice = x.UnitPrice,
+                PurchasePrice = x.PurchasePrice,
+                Status = x.Status
             }).FirstOrDefault(x => x.Id == id);
         }
 
@@ -44,7 +46,7 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
                 Description = x.Description,
                 Operation = x.Operation,
                 OperationDate = x.OperationDate.ToFarsi(),
-               OperatorId = 0
+                OperatorId = 0,
             }).OrderByDescending(x => x.Id).ToList();
         }
 
@@ -58,11 +60,14 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
                 InStock = x.InStock,
                 ProductId = x.ProductId,
                 UnitPrice = x.UnitPrice,
-                CurrentCount = x.CalculateCurrentCount()
+                CurrentCount = x.CalculateCurrentCount(),
+                Status = x.Status
             });
             var product = _shopContext.Products.Select(x => new { x.Id, x.Name }).ToList();
+
+            query = query.Where(x => x.Status == searchModel.Status);
             if (searchModel.InStock)
-                query = query.Where(x => x.InStock);
+                query = query.Where(x => !x.InStock);
             if (searchModel.ProductId > 0)
                 query = query.Where(x => x.ProductId == searchModel.ProductId);
 

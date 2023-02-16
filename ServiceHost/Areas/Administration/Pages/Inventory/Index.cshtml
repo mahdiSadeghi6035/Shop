@@ -4,12 +4,13 @@
     Layout = "_AdminLayout";
     ViewData["Title"] = "مدیریت انبار";
 }
+@using _0_Framework.Application
 
 <div class="row">
     <div class="col-sm-12">
         <h4 class="page-title pull-right">@ViewData["Title"]</h4>
         <p class="pull-left">
-            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد انبار جدید جدید</a>
+            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">ایجاد انبار جدید</a>
         </p>
     </div>
 </div>
@@ -18,7 +19,7 @@
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">جستجو در عکس محصولات</h3>
+                <h3 class="panel-title">جستجو در انبار</h3>
             </div>
             <div class="panel-body">
                 <form class="form-inline" role="form" method="get">
@@ -36,6 +37,14 @@
                             </label>
                         </div>
                     </div>
+                    <div class="form-group m-r-10">
+                        <div class="checkbox checkbox-primary">
+                            <input asp-for="SearchModel.Status">
+                            <label asp-for="SearchModel.Status">
+                                جستجو در توقف تولید
+                            </label>
+                        </div>
+                    </div>
                     <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">جستجو</button>
                     <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">مشاهده همه</a>
                 </form>
@@ -48,7 +57,7 @@
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">لیست عکس محصولات : (@Model.Inventory.Count())</h3>
+                <h3 class="panel-title">لیست انبار : (@Model.Inventory.Count())</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -70,7 +79,7 @@
                                     <tr>
                                         <td>@item.Id</td>
                                         <td>@item.Product</td>
-                                        <td>@item.UnitPrice</td>
+                                        <td>@item.UnitPrice.ToMoney()</td>
                                         <td>@item.CurrentCount</td>
                                         <td>@item.CreationDate</td>
                                         <td>
@@ -78,19 +87,22 @@
                                            href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id})">
                                                 <i class="fa fa-edit"></i> ویرایش
                                             </a>
-                                            <a class="btn btn-success waves-effect waves-light m-b-5"
+                                            @if (!item.Status)
+                                            {
+                                                <a class="btn btn-success waves-effect waves-light m-b-5"
                                            href="#showmodal=@Url.Page("./Index", "Increase", new {id = item.Id})">
-                                                <i class="fa fa-plus"></i> افزایش موجودی
-                                            </a>
-                                            <a class="btn btn-danger waves-effect waves-light m-b-5"
+                                                    <i class="fa fa-plus"></i> افزایش موجودی
+                                                </a>
+                                                <a class="btn btn-danger waves-effect waves-light m-b-5"
                                            href="#showmodal=@Url.Page("./Index", "Reduce", new {id = item.Id})">
-                                                <i class="fa fa-minus"></i> کاهش موجودی
-                                            </a>
+                                                    <i class="fa fa-minus"></i> کاهش موجودی
+                                                </a>
+                                            }
                                             <a class="btn btn-primary waves-effect waves-light m-b-5"
                                            href="#showmodal=@Url.Page("./Index", "Log", new {id = item.Id})"
                                            onclick="$('.modal-dialog').css('width', '60%')">
-                                                <i class="fa fa-recycle"></i> مشاهده گردنش انبار
-                                            </a>
+                                                    <i class="fa fa-recycle"></i> مشاهده گردنش انبار
+                                                </a>
                                         </td>
                                     </tr>
                                 }

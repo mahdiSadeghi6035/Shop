@@ -30,18 +30,14 @@ namespace ServiceHost.Areas.Administration.Pages.Shop.Brand
         }
         public IActionResult OnGetEdit(long id)
         {
-
             var brand = _brandApplication.GetEdit(id);
             return Partial("./Edit", brand);
         }
         public JsonResult OnPostEdit(EditBrand command)
         {
-            if (ModelState.IsValid)
-            {
-                var result = _brandApplication.Edit(command);
-                return new JsonResult(result);
-            }
-            return null;
+
+            var result = _brandApplication.Edit(command);
+            return new JsonResult(result);
         }
     }
 }

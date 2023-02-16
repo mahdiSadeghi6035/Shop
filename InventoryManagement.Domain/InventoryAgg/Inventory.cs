@@ -10,20 +10,26 @@ namespace InventoryManagement.Domain.InventoryAgg
         public string Color { get; private set; }
         public bool InStock { get; private set; }
         public double UnitPrice { get; private set; }
+        public double PurchasePrice { get; private set; }
+        public bool Status { get; private set; }
         public List<OperationInventory> InventoryOperation { get; private set; }
 
-        public Inventory(long productId, string color, double unitPrice)
+        public Inventory(long productId, string color, double unitPrice, double purchasePrice, bool status)
         {
             ProductId = productId;
             Color = color;
             UnitPrice = unitPrice;
             InventoryOperation = new List<OperationInventory>();
+            PurchasePrice = purchasePrice;
+            Status = status;
         }
-        public void Edit(long productId, string color, double unitPrice)
+        public void Edit(long productId, string color, double unitPrice, double purchasePrice, bool status)
         {
             ProductId = productId;
             Color = color;
             UnitPrice = unitPrice;
+            PurchasePrice = purchasePrice;
+            Status = status;
         }
         public long CalculateCurrentCount()
         {
@@ -36,12 +42,14 @@ namespace InventoryManagement.Domain.InventoryAgg
             var currentCount = CalculateCurrentCount() + count;
             var operation = new OperationInventory(operatorId, count, Id, currentCount, desciption, true);
             InventoryOperation.Add(operation);
+            InStock = currentCount > 0;
         }
         public void Reduce(long count, string desciption, long operatorId)
         {
             var currentCount = CalculateCurrentCount() - count;
             var operation = new OperationInventory(operatorId, count, Id, currentCount, desciption, false);
             InventoryOperation.Add(operation);
+            InStock = currentCount > 0;
         }
     }
 }

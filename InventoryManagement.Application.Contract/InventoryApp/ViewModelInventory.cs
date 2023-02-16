@@ -10,5 +10,6 @@
         public bool InStock { get; set; }
         public string CreationDate { get; set; }
         public long CurrentCount { get; set; }
+        public bool Status { get; set; }
     }
 }
