@@ -25,5 +25,10 @@ namespace ServiceHost.Areas.Administration.Pages.Articles.Video
             Video = _videoApplication.Search(searchModel);
             SelectLists = new SelectList(_videoCategoryApplication.GetVideoCategory(), "Id", "Name");
         }
+        public IActionResult OnGetVideo(long id)
+        {
+            var video = _videoApplication.GetVideo(id);
+            return Partial("./GetVideo", video);
+        }
     }
 }

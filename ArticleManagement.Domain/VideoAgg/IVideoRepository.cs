@@ -8,7 +8,8 @@ namespace ArticleManagement.Domain.VideoAgg
     {
         EditVideo GetEdit(long id);
         List<ViewModelVideo> Search(SearchModelVideo searchModel);
-        Video GetVideo(long id);
+        VideoModel GetVideo(long id);
+        Video GetVideoBy(long id);
 
     }
 }

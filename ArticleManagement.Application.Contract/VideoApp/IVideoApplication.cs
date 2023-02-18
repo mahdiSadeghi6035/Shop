@@ -9,5 +9,7 @@ namespace ArticleManagement.Application.Contract.VideoApp
         OperationResult Edit(EditVideo command);
         EditVideo GetEdit(long id);
         List<ViewModelVideo> Search(SearchModelVideo searchModel);
+        VideoModel GetVideo(long id);   
+
     }
 }

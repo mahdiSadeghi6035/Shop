@@ -34,7 +34,17 @@ namespace ArticleManagement.Infrastructure.EfCore.Repository
             }).FirstOrDefault(x => x.Id == id);
         }
 
-        public Video GetVideo(long id)
+        public VideoModel GetVideo(long id)
+        {
+            return _context.Video.Select(x => new VideoModel
+            {
+                Id = x.Id,
+                Video = x.Videos,
+                Type = x.Type
+            }).FirstOrDefault(x => x.Id == id);
+        }
+
+        public Video GetVideoBy(long id)
         {
             return _context.Video.Include(x => x.VideoCategory).FirstOrDefault(x => x.Id == id);
         }

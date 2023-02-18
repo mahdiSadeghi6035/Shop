@@ -1,0 +1,23 @@
+﻿@model ArticleManagement.Application.Contract.VideoApp.VideoModel
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">فیلم محصول</h4>
+</div>
+
+
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <video width="400" height="240" controls>
+                <source src="~/fileUploader/@Model.Video" type="@Model.Type">
+                مروگر شما این فرمت را پشتیبانی نمی کند.
+            </video>
+        </div>
+
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+</div>

@@ -37,7 +37,7 @@ namespace ArticleManagement.Application
         public OperationResult Edit(EditVideo command)
         {
             var operation = new OperationResult();
-            var video = _videoRepository.GetVideo(command.Id);
+            var video = _videoRepository.GetVideoBy(command.Id);
             if (video == null)
                 return operation.Failde(ApplicationMessages.RecordNotFound);
             if (_videoRepository.Exists(x => x.Name == command.Name && x.Id != command.Id))
@@ -55,6 +55,11 @@ namespace ArticleManagement.Application
         public EditVideo GetEdit(long id)
         {
             return _videoRepository.GetEdit(id);
+        }
+
+        public VideoModel GetVideo(long id)
+        {
+            return _videoRepository.GetVideo(id);
         }
 
         public List<ViewModelVideo> Search(SearchModelVideo searchModel)
