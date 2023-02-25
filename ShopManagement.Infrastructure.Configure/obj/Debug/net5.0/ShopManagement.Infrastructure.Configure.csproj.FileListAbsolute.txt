@@ -21,3 +21,17 @@ D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Co
 D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\obj\Debug\net5.0\refint\ShopManagement.Infrastructure.Configure.dll
 D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\obj\Debug\net5.0\ShopManagement.Infrastructure.Configure.pdb
 D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\obj\Debug\net5.0\ref\ShopManagement.Infrastructure.Configure.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\_01_ShopQuery.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\_01_ShopQuery.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\DiscountManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\DiscountManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\DiscountManagement.Infrastructure.EfCore.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\InventoryManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\InventoryManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\InventoryManagement.Infrastructure.EfCore.dll
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\DiscountManagement.Application.Contract.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\DiscountManagement.Domain.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\DiscountManagement.Infrastructure.EfCore.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\InventoryManagement.Application.Contract.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\InventoryManagement.Domain.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ShopManagement.Infrastructure.Configure\bin\Debug\net5.0\InventoryManagement.Infrastructure.EfCore.pdb

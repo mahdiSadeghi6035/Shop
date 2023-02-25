@@ -2362,7 +2362,8 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "ShopManagement.Application": "1.0.0",
           "ShopManagement.Domain": "1.0.0",
-          "ShopManagement.Infrastructure.EfCore": "1.0.0"
+          "ShopManagement.Infrastructure.EfCore": "1.0.0",
+          "_01_ShopQuery": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ShopManagement.Infrastructure.Configure.dll": {}
@@ -2384,6 +2385,21 @@
         },
         "runtime": {
           "bin/placeholder/ShopManagement.Infrastructure.EfCore.dll": {}
+        }
+      },
+      "_01_ShopQuery/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "DiscountManagement.Infrastructure.EfCore": "1.0.0",
+          "InventoryManagement.Infrastructure.EfCore": "1.0.0",
+          "ShopManagement.Infrastructure.EfCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/_01_ShopQuery.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/_01_ShopQuery.dll": {}
         }
       },
       "_0_Framework/1.0.0": {
@@ -7755,6 +7771,11 @@
       "path": "../ShopManagement.Infrastructure.EfCore/ShopManagement.Infrastructure.EfCore.csproj",
       "msbuildProject": "../ShopManagement.Infrastructure.EfCore/ShopManagement.Infrastructure.EfCore.csproj"
     },
+    "_01_ShopQuery/1.0.0": {
+      "type": "project",
+      "path": "../_01_ShopQuery/_01_ShopQuery.csproj",
+      "msbuildProject": "../_01_ShopQuery/_01_ShopQuery.csproj"
+    },
     "_0_Framework/1.0.0": {
       "type": "project",
       "path": "../_0_Framework/_0_Framework.csproj",
@@ -7862,7 +7883,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.308\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.309\\RuntimeIdentifierGraph.json"
       }
     }
   }

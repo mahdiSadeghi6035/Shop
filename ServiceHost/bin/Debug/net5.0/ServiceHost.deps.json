@@ -2076,7 +2076,8 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "ShopManagement.Application": "1.0.0",
           "ShopManagement.Domain": "1.0.0",
-          "ShopManagement.Infrastructure.EfCore": "1.0.0"
+          "ShopManagement.Infrastructure.EfCore": "1.0.0",
+          "_01_ShopQuery": "1.0.0"
         },
         "runtime": {
           "ShopManagement.Infrastructure.Configure.dll": {}
@@ -2096,6 +2097,19 @@
         },
         "compile": {
           "ShopManagement.Infrastructure.EfCore.dll": {}
+        }
+      },
+      "_01_ShopQuery/1.0.0": {
+        "dependencies": {
+          "DiscountManagement.Infrastructure.EfCore": "1.0.0",
+          "InventoryManagement.Infrastructure.EfCore": "1.0.0",
+          "ShopManagement.Infrastructure.EfCore": "1.0.0"
+        },
+        "runtime": {
+          "_01_ShopQuery.dll": {}
+        },
+        "compile": {
+          "_01_ShopQuery.dll": {}
         }
       },
       "_0_Framework/1.0.0": {
@@ -4812,6 +4826,11 @@
       "sha512": ""
     },
     "ShopManagement.Infrastructure.EfCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "_01_ShopQuery/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

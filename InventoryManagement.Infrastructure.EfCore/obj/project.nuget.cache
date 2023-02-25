@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZieRhj2DI7RlUdtL/c1OJYNppidfgLcFm0BOJVuu6y3FtEUtJ+ZjS4hPPzascdtPcxs8p7THdHiG6NRBENggZg==",
+  "dgSpecHash": "VflvUNFZoWRZvrTgQ/Me6aIkUogzseQ9AGHy5KrhGlDwGcnL+euhBv2Ntwev9UpfLiOiNI6PLe92WLyRJfogeQ==",
   "success": true,
   "projectFilePath": "D:\\Programming\\Back End\\ShopProject\\ShopProject\\InventoryManagement.Infrastructure.EfCore\\InventoryManagement.Infrastructure.EfCore.csproj",
   "expectedPackageFiles": [

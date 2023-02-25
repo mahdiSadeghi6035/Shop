@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using _01_ShopQuery.Contract.GroupingProduct;
+using _01_ShopQuery.Contract.Slide;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System;
@@ -10,16 +12,16 @@ namespace ServiceHost.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
+        private readonly IGroupingQuery _groupingQuery;
+        public IEnumerable<GroupingModel> Groupings{ get; set; }
+        public IndexModel(IGroupingQuery groupingQuery)
         {
-            _logger = logger;
+            _groupingQuery = groupingQuery;
         }
 
         public void OnGet()
         {
-
+           Groupings = _groupingQuery.GetLatestProduct();
         }
     }
 }

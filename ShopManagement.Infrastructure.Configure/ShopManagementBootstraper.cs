@@ -1,4 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using _01_ShopQuery.Contract.Category;
+using _01_ShopQuery.Contract.GroupingProduct;
+using _01_ShopQuery.Contract.Product;
+using _01_ShopQuery.Contract.Slide;
+using _01_ShopQuery.Query;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ShopManagement.Application;
 using ShopManagement.Application.Contract.BrandApp;
@@ -50,6 +55,13 @@ namespace ShopManagement.Infrastructure.Configure
             services.AddTransient<IVideoProductRepository, VideoProductRepository>();
             services.AddTransient<IVideoProductApplication, VideoProductApplication>();
 
+            services.AddTransient<ISlideQuery, SlideQuery>();
+
+            services.AddTransient<IGroupingQuery, GroupingQuery>();
+
+            services.AddTransient<ICategoryQuery, CategoryQuery>();
+
+            services.AddTransient<IProductQuery, ProductQuery>();
 
             services.AddDbContext<ShopContext>(x => x.UseSqlServer(connection));
         }

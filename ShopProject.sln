@@ -79,6 +79,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArticleManagement.Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArticleManagement.Application", "ArticleManagement.Application\ArticleManagement.Application.csproj", "{FF100082-54DF-45A8-BE3B-9819E8A8B786}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_01_ShopQuery", "_01_ShopQuery\_01_ShopQuery.csproj", "{641D61C2-F334-4EE8-A159-1CF7A2A79584}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -173,6 +175,10 @@ Global
 		{FF100082-54DF-45A8-BE3B-9819E8A8B786}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF100082-54DF-45A8-BE3B-9819E8A8B786}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF100082-54DF-45A8-BE3B-9819E8A8B786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{641D61C2-F334-4EE8-A159-1CF7A2A79584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641D61C2-F334-4EE8-A159-1CF7A2A79584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641D61C2-F334-4EE8-A159-1CF7A2A79584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641D61C2-F334-4EE8-A159-1CF7A2A79584}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

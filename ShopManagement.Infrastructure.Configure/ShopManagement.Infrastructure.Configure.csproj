@@ -12,6 +12,7 @@
     <ProjectReference Include="..\ShopManagement.Application\ShopManagement.Application.csproj" />
     <ProjectReference Include="..\ShopManagement.Domain\ShopManagement.Domain.csproj" />
     <ProjectReference Include="..\ShopManagement.Infrastructure.EfCore\ShopManagement.Infrastructure.EfCore.csproj" />
+    <ProjectReference Include="..\_01_ShopQuery\_01_ShopQuery.csproj" />
   </ItemGroup>
 
 </Project>
