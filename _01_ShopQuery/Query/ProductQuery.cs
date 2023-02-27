@@ -33,19 +33,20 @@ namespace _01_ShopQuery.Query
                 PictureTitle = x.PictureTitle,
             }).OrderByDescending(x => x.Id).ToList();
 
-            var inventory = _inventoryContext.Inventory.Select(x => new { x.Id, x.ProductId, x.UnitPrice, x.InStock, x.Status});
-            var discount = _discountContext.Discounts.Where(x => !x.IsRemoved).Select(x => new { x.Id, x.Rate, x.ProductId});
+            var inventory = _inventoryContext.Inventory.Select(x => new { x.Id, x.ProductId, x.UnitPrice, x.InStock, x.Status });
+            var discount = _discountContext.Discounts.Where(x => !x.IsRemoved).Select(x => new { x.Id, x.Rate, x.ProductId });
 
             foreach (var item in products)
             {
                 var getInventory = inventory.FirstOrDefault(x => x.ProductId == item.Id);
-                if(getInventory != null)
+                if (getInventory != null)
                 {
                     double unitPrice = getInventory.UnitPrice;
                     item.UnitPrice = unitPrice;
+                    item.InStock = getInventory.InStock;
                     item.Status = getInventory.Status;
                     var getDiscount = discount.FirstOrDefault(x => x.ProductId == item.Id);
-                    if(getDiscount != null)
+                    if (getDiscount != null)
                     {
                         double rate = getDiscount.Rate;
                         item.HasDiscount = rate > 0;
@@ -56,6 +57,50 @@ namespace _01_ShopQuery.Query
 
                 }
             }
+
+            return products;
+        }
+
+        public IEnumerable<ProductModel> SearchProduct(string value)
+        {
+            var getProduct = _shopContext.Products.Select(x => new ProductModel
+            {
+                Id = x.Id,
+                Slug = x.Slug,
+                Name = x.Name,
+                Picture = x.Picture,
+                PictureAlt = x.PictureAlt,
+                PictureTitle = x.PictureTitle,
+            });
+
+            getProduct = getProduct.Where(x => x.Name.Contains(value));
+
+            var inventory = _inventoryContext.Inventory.Select(x => new { x.Id, x.ProductId, x.UnitPrice, x.InStock, x.Status });
+            var discount = _discountContext.Discounts.Where(x => !x.IsRemoved).Select(x => new { x.Id, x.Rate, x.ProductId });
+
+            var products = getProduct.OrderByDescending(x => x.Id).ToList();
+            foreach (var item in products)
+            {
+                var getInventory = inventory.FirstOrDefault(x => x.ProductId == item.Id);
+                if (getInventory != null)
+                {
+                    double unitPrice = getInventory.UnitPrice;
+                    item.UnitPrice = unitPrice;
+                    item.InStock = getInventory.InStock;
+                    item.Status = getInventory.Status;
+                    var getDiscount = discount.FirstOrDefault(x => x.ProductId == item.Id);
+                    if (getDiscount != null)
+                    {
+                        double rate = getDiscount.Rate;
+                        item.HasDiscount = rate > 0;
+                        item.Discount = rate;
+                        var amount = Math.Round((unitPrice / 100) * rate);
+                        item.DiscountPrice = amount;
+                    }
+
+                }
+            }
+
 
             return products;
         }

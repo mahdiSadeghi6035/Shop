@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ShopManagement.Infrastructure.Configure;
+using ShopManagement.Presentation.Api;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +36,8 @@ namespace ServiceHost
             InventoryManagementBootstraper.Configure(services, connectionString);
             ArticleManagementBootstraper.Configure(services, connectionString);
             services.AddTransient<IFileUploader, FileUploader>();
-            services.AddRazorPages();
+            services.AddRazorPages()
+                .AddApplicationPart(typeof(ShopController).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +64,7 @@ namespace ServiceHost
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }

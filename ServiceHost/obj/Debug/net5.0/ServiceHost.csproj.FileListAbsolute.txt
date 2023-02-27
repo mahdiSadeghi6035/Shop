@@ -245,3 +245,7 @@ D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Raz
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Articles\Video\GetVideo.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\_01_ShopQuery.dll
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\_01_ShopQuery.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\ShopManagement.Presentation.Api.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\ShopManagement.Presentation.Api.pdb

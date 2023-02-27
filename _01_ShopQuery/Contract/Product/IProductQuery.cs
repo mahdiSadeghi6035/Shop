@@ -5,5 +5,6 @@ namespace _01_ShopQuery.Contract.Product
     public interface IProductQuery
     {
         IEnumerable<ProductModel> GetProduct();
+        IEnumerable<ProductModel> SearchProduct(string value);
     }
 }
