@@ -6,11 +6,11 @@ namespace ShopManagement.Presentation.Api
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ShopController : ControllerBase
+    public class ProductController : ControllerBase
     {
         private readonly IProductQuery _productQuery;
 
-        public ShopController(IProductQuery productQuery)
+        public ProductController(IProductQuery productQuery)
         {
             _productQuery = productQuery;
         }
@@ -19,11 +19,12 @@ namespace ShopManagement.Presentation.Api
         {
             return _productQuery.GetProduct();
         }
-        [HttpGet("search")]
+        [HttpGet("{value}")]
         public IEnumerable<ProductModel> Search(string value)
         {
             return _productQuery.SearchProduct(value);
         }
-
+        
+        
     }
 }

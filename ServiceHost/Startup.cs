@@ -37,7 +37,7 @@ namespace ServiceHost
             ArticleManagementBootstraper.Configure(services, connectionString);
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddRazorPages()
-                .AddApplicationPart(typeof(ShopController).Assembly);
+                .AddApplicationPart(typeof(ProductController).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

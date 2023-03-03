@@ -113,7 +113,7 @@ namespace _01_ShopQuery.Query
                                 itemProduct.HasDiscount = rate > 0;
                                 itemProduct.Discount = rate;
                                 var discountAmount = Math.Round((price / 100) * rate);
-                                itemProduct.DiscountPrice = discountAmount;
+                                itemProduct.DiscountPrice = (price - discountAmount);
                             }
                         }
                         

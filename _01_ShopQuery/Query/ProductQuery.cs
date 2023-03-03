@@ -52,7 +52,7 @@ namespace _01_ShopQuery.Query
                         item.HasDiscount = rate > 0;
                         item.Discount = rate;
                         var amount = Math.Round((unitPrice / 100) * rate);
-                        item.DiscountPrice = amount;
+                        item.DiscountPrice = (unitPrice - amount);
                     }
 
                 }
@@ -95,7 +95,7 @@ namespace _01_ShopQuery.Query
                         item.HasDiscount = rate > 0;
                         item.Discount = rate;
                         var amount = Math.Round((unitPrice / 100) * rate);
-                        item.DiscountPrice = amount;
+                        item.DiscountPrice = (unitPrice - amount);
                     }
 
                 }

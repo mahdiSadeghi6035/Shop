@@ -1,4 +1,5 @@
-﻿using _01_ShopQuery.Contract.Category;
+﻿using _01_ShopQuery.Contract.Brand;
+using _01_ShopQuery.Contract.Category;
 using _01_ShopQuery.Contract.GroupingProduct;
 using _01_ShopQuery.Contract.Product;
 using _01_ShopQuery.Contract.Slide;
@@ -62,6 +63,8 @@ namespace ShopManagement.Infrastructure.Configure
             services.AddTransient<ICategoryQuery, CategoryQuery>();
 
             services.AddTransient<IProductQuery, ProductQuery>();
+
+            services.AddTransient<IBrandQuery, BrandQuery>();
 
             services.AddDbContext<ShopContext>(x => x.UseSqlServer(connection));
         }
