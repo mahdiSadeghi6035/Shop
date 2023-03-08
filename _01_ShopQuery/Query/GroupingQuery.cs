@@ -1,10 +1,12 @@
 ﻿using _01_ShopQuery.Contract.Category;
 using _01_ShopQuery.Contract.GroupingProduct;
+using _01_ShopQuery.Contract.GroupingSlide;
 using _01_ShopQuery.Contract.Product;
 using DiscountManagement.Infrastructure.EfCore;
 using InventoryManagement.Infrastructure.EfCore;
 using Microsoft.EntityFrameworkCore;
 using ShopManagement.Domain.CategoryAgg;
+using ShopManagement.Domain.GroupingSlideAgg;
 using ShopManagement.Domain.ProductAgg;
 using ShopManagement.Infrastructure.EfCore;
 using System;
@@ -32,11 +34,11 @@ namespace _01_ShopQuery.Query
                 Id = x.Id,
                 Name = x.Name,
                 Slug = x.Slug,
-                CategoryModel = MapCategory(x.categories),
+                CategoryModel = MapCategoryWithProduct(x.categories),
             }).OrderByDescending(x => x.Id).ToList();
         }
 
-        private static List<CategoryModel> MapCategory(List<Category> categories)
+        private static List<CategoryModel> MapCategoryWithProduct(List<Category> categories)
         {
             return categories.Select(x => new CategoryModel
             {
@@ -87,9 +89,9 @@ namespace _01_ShopQuery.Query
             });
 
             var grouping = query.OrderByDescending(x => x.Id).ToList();
-            var inventory = _inventoryContext.Inventory.Select(x => new { x.Id, x.UnitPrice, x.InStock, x.Status, x.ProductId});
-            var discount = _discountContext.Discounts.Where(x => !x.IsRemoved).Select(x => new { x.DiscountType, x.Id, x.IsRemoved, x.Rate, x.ProductId});
-            
+            var inventory = _inventoryContext.Inventory.Select(x => new { x.Id, x.UnitPrice, x.InStock, x.Status, x.ProductId });
+            var discount = _discountContext.Discounts.Where(x => !x.IsRemoved).Select(x => new { x.DiscountType, x.Id, x.IsRemoved, x.Rate, x.ProductId });
+
 
             foreach (var item in grouping)
             {
@@ -100,14 +102,14 @@ namespace _01_ShopQuery.Query
                     foreach (var itemProduct in item.ProductModels)
                     {
                         var getInventory = inventory.FirstOrDefault(x => x.ProductId == itemProduct.Id);
-                        if(getInventory != null)
+                        if (getInventory != null)
                         {
                             double price = getInventory.UnitPrice;
                             itemProduct.UnitPrice = price;
                             itemProduct.Status = getInventory.Status;
                             itemProduct.InStock = getInventory.InStock;
                             var getDiscount = discount.FirstOrDefault(x => x.ProductId == itemProduct.Id);
-                            if(getDiscount != null)
+                            if (getDiscount != null)
                             {
                                 double rate = getDiscount.Rate;
                                 itemProduct.HasDiscount = rate > 0;
@@ -116,7 +118,7 @@ namespace _01_ShopQuery.Query
                                 itemProduct.DiscountPrice = (price - discountAmount);
                             }
                         }
-                        
+
 
                     }
                 }
@@ -124,5 +126,18 @@ namespace _01_ShopQuery.Query
 
             return grouping;
         }
+
+        private List<CategoryModel> MapCategory(List<Category> categories)
+        {
+            return categories.Select(x => new CategoryModel
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Slug = x.Slug,
+            }).OrderByDescending(x => x.Id).ToList();
+        }
+
+       
+        
     }
 }

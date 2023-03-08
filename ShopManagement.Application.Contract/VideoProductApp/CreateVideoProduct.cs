@@ -8,6 +8,7 @@ namespace ShopManagement.Application.Contract.VideoProductApp
 {
     public class CreateVideoProduct
     {
+        [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         [MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessage.maxFileSizeMessage)]
         [FileExtentionLimitation(new string[] { ".mp4" }, ErrorMessage = ValidationMessage.ExtentionMessage)]
         public IFormFile Video { get; set; }

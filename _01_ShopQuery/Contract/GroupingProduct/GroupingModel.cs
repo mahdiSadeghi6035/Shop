@@ -1,4 +1,5 @@
 ﻿using _01_ShopQuery.Contract.Category;
+using _01_ShopQuery.Contract.GroupingSlide;
 using _01_ShopQuery.Contract.Product;
 using System.Collections.Generic;
 
@@ -17,5 +18,6 @@ namespace _01_ShopQuery.Contract.GroupingProduct
         public string MetaDescription { get; set; }
         public List<ProductModel> ProductModels{ get; set; }
         public List<CategoryModel> CategoryModel{ get; set; }
+        public List<GroupingSlideModel> GroupingSlide { get; set; }
     }
 }

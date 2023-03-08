@@ -8,6 +8,7 @@ namespace ArticleManagement.Application.Contract.ArticleApp
     {
         [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         public string Title { get; set; }
+        [Required(ErrorMessage = ValidationMessage.RequiredMessage)]
         [MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessage.maxFileSizeMessage)]
         [FileExtentionLimitation(new string[] { ".jpeg", ".jpg", ".png" }, ErrorMessage = ValidationMessage.ExtentionMessage)]
         public IFormFile Picture { get; set; }
