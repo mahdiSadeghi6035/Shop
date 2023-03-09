@@ -48,13 +48,44 @@ namespace InventoryManagement.Infrastructure.EfCore.Migrations
                     b.Property<double>("UnitPrice")
                         .HasColumnType("float");
 
+                    b.Property<long>("WarrantyId")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("WarrantyId");
 
                     b.ToTable("Inventory");
                 });
 
+            modelBuilder.Entity("InventoryManagement.Domain.WarrantyAgg.Warranty", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("WarrantyDescription")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Warranty");
+                });
+
             modelBuilder.Entity("InventoryManagement.Domain.InventoryAgg.Inventory", b =>
                 {
+                    b.HasOne("InventoryManagement.Domain.WarrantyAgg.Warranty", "Warranty")
+                        .WithMany("Invetorys")
+                        .HasForeignKey("WarrantyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.OwnsMany("InventoryManagement.Domain.InventoryAgg.OperationInventory", "InventoryOperation", b1 =>
                         {
                             b1.Property<long>("Id")
@@ -98,6 +129,13 @@ namespace InventoryManagement.Infrastructure.EfCore.Migrations
                         });
 
                     b.Navigation("InventoryOperation");
+
+                    b.Navigation("Warranty");
+                });
+
+            modelBuilder.Entity("InventoryManagement.Domain.WarrantyAgg.Warranty", b =>
+                {
+                    b.Navigation("Invetorys");
                 });
 #pragma warning restore 612, 618
         }

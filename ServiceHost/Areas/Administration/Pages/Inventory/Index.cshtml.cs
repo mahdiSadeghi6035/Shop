@@ -1,4 +1,5 @@
 using InventoryManagement.Application.Contract.InventoryApp;
+using InventoryManagement.Application.Contract.WarrantyApp;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -11,13 +12,15 @@ namespace ServiceHost.Areas.Administration.Pages.Inventory
     {
         private readonly IProductApplication _productApplication;
         private readonly IInventoryApplication _inventoryApplication;
+        private readonly IWarrantyApplication _warrantyApplication;
         public List<ViewModelInventory> Inventory { get; set; }
         public SelectList SelectLists { get; set; }
         public SearchModelInventory SearchModel { get; set; }
-        public IndexModel(IProductApplication productApplication, IInventoryApplication inventoryApplication)
+        public IndexModel(IProductApplication productApplication, IInventoryApplication inventoryApplication, IWarrantyApplication warrantyApplication)
         {
             _productApplication = productApplication;
             _inventoryApplication = inventoryApplication;
+            _warrantyApplication = warrantyApplication;
         }
 
         public void OnGet(SearchModelInventory searchModel)
@@ -29,9 +32,10 @@ namespace ServiceHost.Areas.Administration.Pages.Inventory
         {
             var inventory = new CreateInventory()
             {
-                ModelProducts = _productApplication.GetModelProducts()
+                ModelProducts = _productApplication.GetModelProducts(),
+                WarrantyModel = _warrantyApplication.GetAllWarranty()
             };
-            return Partial("./Create",inventory);
+            return Partial("./Create", inventory);
         }
         public JsonResult OnPostCreate(CreateInventory command)
         {
@@ -42,7 +46,8 @@ namespace ServiceHost.Areas.Administration.Pages.Inventory
         {
             var inventory = _inventoryApplication.GetEdit(id);
             inventory.ModelProducts = _productApplication.GetModelProducts();
-            return Partial("./Edit",inventory);
+            inventory.WarrantyModel = _warrantyApplication.GetAllWarranty();
+            return Partial("./Edit", inventory);
         }
         public JsonResult OnPostEdit(EditInventory command)
         {
@@ -68,7 +73,7 @@ namespace ServiceHost.Areas.Administration.Pages.Inventory
             {
                 InventoryId = id
             };
-            return Partial("./Increase",inventory);
+            return Partial("./Increase", inventory);
         }
         public JsonResult OnPostIncrease(OperationInventoryModel command)
         {

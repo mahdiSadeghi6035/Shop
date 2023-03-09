@@ -29,13 +29,22 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="ProductId" class="control-label">محصولات</label>
                     <select class="form-control" asp-for="ProductId" asp-items='@new SelectList(@Model.ModelProducts,"Id","Name")'>
                         <option value="0">محصولات ...</option>
                     </select>
                     <span asp-validation-for="ProductId" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="WarrantyId" class="control-label">گارانتی</label>
+                    <select class="form-control" asp-for="WarrantyId" asp-items='@new SelectList(@Model.WarrantyModel,"Id","WarrantyDescription")'>
+                        <option value="0">گارانتی ...</option>
+                    </select>
+                    <span asp-validation-for="WarrantyId" class="error"></span>
                 </div>
             </div>
         </div>

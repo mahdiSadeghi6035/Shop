@@ -17,7 +17,7 @@ namespace InventoryManagmenet.Application
         public OperationResult Create(CreateInventory command)
         {
             var operation = new OperationResult();
-            var inventory = new Inventory(command.ProductId, command.Color, command.UnitPrice, command.PurchasePrice, command.Status);
+            var inventory = new Inventory(command.ProductId, command.Color, command.UnitPrice, command.PurchasePrice, command.Status, command.WarrantyId);
             _inventoryRepository.Create(inventory);
             _inventoryRepository.SaveChanges();
             return operation.Succedded();
@@ -29,7 +29,7 @@ namespace InventoryManagmenet.Application
             var inventory = _inventoryRepository.GetBy(command.Id);
             if (inventory == null)
                 return operation.Failde(ApplicationMessages.DuplicatedRecord);
-            inventory.Edit(command.ProductId, command.Color, command.UnitPrice, command.PurchasePrice, command.Status);
+            inventory.Edit(command.ProductId, command.Color, command.UnitPrice, command.PurchasePrice, command.Status, command.WarrantyId);
             _inventoryRepository.SaveChanges();
             return operation.Succedded();
         }

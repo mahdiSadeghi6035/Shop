@@ -1,5 +1,7 @@
 ﻿using InventoryManagement.Application.Contract.InventoryApp;
+using InventoryManagement.Application.Contract.WarrantyApp;
 using InventoryManagement.Domain.InventoryAgg;
+using InventoryManagement.Domain.WarrantyAgg;
 using InventoryManagement.Infrastructure.EfCore;
 using InventoryManagement.Infrastructure.EfCore.Repository;
 using InventoryManagmenet.Application;
@@ -15,6 +17,9 @@ namespace InventoryManagement.Infrastructure.Configure
         {
             services.AddTransient<IInventoryRepository, InventoryRepository>();
             services.AddTransient<IInventoryApplication, InventoryApplication>();
+
+            services.AddTransient<IWarrantyRepository, WarrantyRepository>();
+            services.AddTransient<IWarrantyApplication, WarrantyApplication>();
 
             services.AddDbContext<InventoryContext>(x => x.UseSqlServer(connection));
         }

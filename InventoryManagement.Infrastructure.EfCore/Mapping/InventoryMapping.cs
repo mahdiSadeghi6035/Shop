@@ -19,6 +19,7 @@ namespace InventoryManagement.Infrastructure.EfCore.Mapping
 
                 navigation.WithOwner(x => x.Inventorys).HasForeignKey(x => x.InventoryId);
             });
+            builder.HasOne(x => x.Warranty).WithMany(x => x.Invetorys).HasForeignKey(x => x.WarrantyId);
         }
     }
 }

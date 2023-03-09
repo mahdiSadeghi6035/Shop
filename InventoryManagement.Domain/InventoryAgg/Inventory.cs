@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Domain;
+using InventoryManagement.Domain.WarrantyAgg;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,9 +13,11 @@ namespace InventoryManagement.Domain.InventoryAgg
         public double UnitPrice { get; private set; }
         public double PurchasePrice { get; private set; }
         public bool Status { get; private set; }
+        public long WarrantyId { get; private set; }
+        public Warranty Warranty{ get; private set; }
         public List<OperationInventory> InventoryOperation { get; private set; }
 
-        public Inventory(long productId, string color, double unitPrice, double purchasePrice, bool status)
+        public Inventory(long productId, string color, double unitPrice, double purchasePrice, bool status, long warrantyId)
         {
             ProductId = productId;
             Color = color;
@@ -22,16 +25,19 @@ namespace InventoryManagement.Domain.InventoryAgg
             InventoryOperation = new List<OperationInventory>();
             PurchasePrice = purchasePrice;
             Status = status;
+            WarrantyId = warrantyId;
         }
-        public void Edit(long productId, string color, double unitPrice, double purchasePrice, bool status)
+        public void Edit(long productId, string color, double unitPrice, double purchasePrice, bool status, long warrantyId)
         {
             ProductId = productId;
             Color = color;
             UnitPrice = unitPrice;
             PurchasePrice = purchasePrice;
             Status = status;
+            WarrantyId = warrantyId;
+
         }
-        public long CalculateCurrentCount()
+    public long CalculateCurrentCount()
         {
             var plus = InventoryOperation.Where(x => x.Operation).Sum(x => x.Count);
             var minus = InventoryOperation.Where(x => !x.Operation).Sum(x => x.Count);

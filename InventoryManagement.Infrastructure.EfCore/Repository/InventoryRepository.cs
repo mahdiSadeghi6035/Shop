@@ -28,7 +28,8 @@ namespace InventoryManagement.Infrastructure.EfCore.Repository
                 ProductId = x.ProductId,
                 UnitPrice = x.UnitPrice,
                 PurchasePrice = x.PurchasePrice,
-                Status = x.Status
+                Status = x.Status,
+                WarrantyId = x.WarrantyId
             }).FirstOrDefault(x => x.Id == id);
         }
 
