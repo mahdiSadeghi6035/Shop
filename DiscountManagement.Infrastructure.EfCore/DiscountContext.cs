@@ -1,4 +1,5 @@
-﻿using DiscountManagement.Domain.DiscountAgg;
+﻿using DiscountManagement.Domain.CodeDiscountAgg;
+using DiscountManagement.Domain.DiscountAgg;
 using DiscountManagement.Domain.OccasionalDiscountsAgg;
 using DiscountManagement.Infrastructure.EfCore.Mapping;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ namespace DiscountManagement.Infrastructure.EfCore
     {
         public DbSet<Discount> Discounts { get; set; }
         public DbSet<OccasionalDiscounts> OccasionalDiscounts { get; set; }
+        public DbSet<CodeDiscount> CodeDiscount { get; set; }
         public DiscountContext(DbContextOptions<DiscountContext> options) : base(options)
         {
 
