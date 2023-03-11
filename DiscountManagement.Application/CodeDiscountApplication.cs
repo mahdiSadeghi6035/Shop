@@ -31,7 +31,7 @@ namespace DiscountManagement.Application
             var codeDiscount = _codeDiscountRepository.GetBy(command.Id);
             if (codeDiscount == null)
                 return operation.Failde(ApplicationMessages.RecordNotFound);
-            if (_codeDiscountRepository.Exists(x => x.Code == command.Code || x.Id != command.Id))
+            if (_codeDiscountRepository.Exists(x => x.Code == command.Code && x.Id != command.Id))
                 return operation.Failde(ApplicationMessages.DuplicatedRecord);
             codeDiscount.Edit(command.Code, command.ProductId, command.DiscountRate, command.Description, command.AccountId);
             _codeDiscountRepository.SaveChanges();

@@ -44,9 +44,15 @@ namespace DiscountManagement.Infrastructure.EfCore.Repository
                 IsRemove = x.IsRemoved,
                 ProductId = x.ProductId
             });
+            if (searchModel.ProductId > 0)
+                query = query.Where(x => x.ProductId == searchModel.ProductId);
+            if (searchModel.AccountId > 0)
+                query = query.Where(x => x.AccountId == searchModel.AccountId);
+            if (searchModel.IsRemove)
+                query = query.Where(x => x.IsRemove);
             var product = _shopContext.Products.Select(x => new { x.Id, x.Name}).ToList();
             var codeDiscount = query.OrderByDescending(x => x.Id).ToList();
-            codeDiscount.ForEach(c => c.ProductName = codeDiscount.FirstOrDefault(p => p.Id == c.ProductId)?.ProductName);
+            codeDiscount.ForEach(c => c.ProductName = product.FirstOrDefault(p => p.Id == c.ProductId)?.Name);
             return codeDiscount;
         }
     }

@@ -1,6 +1,8 @@
 ﻿using DiscountManagement.Application;
+using DiscountManagement.Application.Contract.CodeDiscountApp;
 using DiscountManagement.Application.Contract.DiscountApp;
 using DiscountManagement.Application.Contract.OccasionalDiscountsApp;
+using DiscountManagement.Domain.CodeDiscountAgg;
 using DiscountManagement.Domain.DiscountAgg;
 using DiscountManagement.Domain.OccasionalDiscountsAgg;
 using DiscountManagement.Infrastructure.EfCore;
@@ -19,6 +21,9 @@ namespace DiscountManagement.Infrastructure.Configure
 
             services.AddTransient<IOccasionalDiscountsRepository, OccasionalDiscountsRepository>();
             services.AddTransient<IOccasionalDiscountsApplication, OccasionalDiscountsApplication>();
+
+            services.AddTransient<ICodeDiscountRepository, CodeDiscountRepository>();
+            services.AddTransient<ICodeDiscountApplication, CodeDiscountApplication>();
 
             services.AddDbContext<DiscountContext>(x => x.UseSqlServer(connection));
         }
