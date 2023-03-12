@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RmzmM0GjhPFUp9XeklEqE6QZghAAFcNkFvI1bS5EJGSXq+pD19rgJ1lrMXTFXXMxXcT0lIs/uG6wnn3XjBYzXg==",
+  "dgSpecHash": "QmWeI7VTjE8ryPTMiGrdemrkUmphR1WvciIrt6EqFbsCUgOE6ic7mOXf/M9UFnmym7aKURnFvXKVgw7HvfHKpA==",
   "success": true,
   "projectFilePath": "D:\\Programming\\Back End\\ShopProject\\ShopProject\\DiscountManagement.Infrastructure.EfCore\\DiscountManagement.Infrastructure.EfCore.csproj",
   "expectedPackageFiles": [

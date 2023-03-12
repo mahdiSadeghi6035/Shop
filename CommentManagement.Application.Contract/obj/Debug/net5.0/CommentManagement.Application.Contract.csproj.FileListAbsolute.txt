@@ -1,0 +1,15 @@
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\bin\Debug\net5.0\CommentManagement.Application.Contract.deps.json
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\bin\Debug\net5.0\CommentManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\bin\Debug\net5.0\CommentManagement.Application.Contract.pdb
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\bin\Debug\net5.0\_0_Framework.dll
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\bin\Debug\net5.0\_0_Framework.pdb
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.csproj.AssemblyReference.cache
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.AssemblyInfoInputs.cache
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.AssemblyInfo.cs
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.csproj.CoreCompileInputs.cache
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.csproj.CopyComplete
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\obj\Debug\net5.0\refint\CommentManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\obj\Debug\net5.0\CommentManagement.Application.Contract.pdb
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Application.Contract\obj\Debug\net5.0\ref\CommentManagement.Application.Contract.dll

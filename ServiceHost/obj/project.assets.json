@@ -2478,6 +2478,81 @@
           "bin/placeholder/ArticleManagement.Infrastructure.EfCore.dll": {}
         }
       },
+      "CommentManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Application.Contract": "1.0.0",
+          "CommentManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.dll": {}
+        }
+      },
+      "CommentManagement.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "_0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Application.Contract.dll": {}
+        }
+      },
+      "CommentManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Application.Contract": "1.0.0",
+          "_0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Domain.dll": {}
+        }
+      },
+      "CommentManagement.Infrastructure.Configure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CommentManagement.Application": "1.0.0",
+          "CommentManagement.Domain": "1.0.0",
+          "CommentManagement.Infrstructure.EfCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Infrastructure.Configure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Infrastructure.Configure.dll": {}
+        }
+      },
+      "CommentManagement.Infrstructure.EfCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "ArticleManagement.Infrastructure.EfCore": "1.0.0",
+          "CommentManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "ShopManagement.Infrastructure.EfCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CommentManagement.Infrstructure.EfCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommentManagement.Infrstructure.EfCore.dll": {}
+        }
+      },
       "DiscountManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -8411,6 +8486,31 @@
       "path": "../ArticleManagement.Infrastructure.EfCore/ArticleManagement.Infrastructure.EfCore.csproj",
       "msbuildProject": "../ArticleManagement.Infrastructure.EfCore/ArticleManagement.Infrastructure.EfCore.csproj"
     },
+    "CommentManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application/CommentManagement.Application.csproj",
+      "msbuildProject": "../CommentManagement.Application/CommentManagement.Application.csproj"
+    },
+    "CommentManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Application.Contract/CommentManagement.Application.Contract.csproj",
+      "msbuildProject": "../CommentManagement.Application.Contract/CommentManagement.Application.Contract.csproj"
+    },
+    "CommentManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Domain/CommentManagement.Domain.csproj",
+      "msbuildProject": "../CommentManagement.Domain/CommentManagement.Domain.csproj"
+    },
+    "CommentManagement.Infrastructure.Configure/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Infrastructure.Configure/CommentManagement.Infrastructure.Configure.csproj",
+      "msbuildProject": "../CommentManagement.Infrastructure.Configure/CommentManagement.Infrastructure.Configure.csproj"
+    },
+    "CommentManagement.Infrstructure.EfCore/1.0.0": {
+      "type": "project",
+      "path": "../CommentManagement.Infrstructure.EfCore/CommentManagement.Infrstructure.EfCore.csproj",
+      "msbuildProject": "../CommentManagement.Infrstructure.EfCore/CommentManagement.Infrstructure.EfCore.csproj"
+    },
     "DiscountManagement.Application/1.0.0": {
       "type": "project",
       "path": "../DiscountManagement.Application/DiscountManagement.Application.csproj",
@@ -8505,6 +8605,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "ArticleManagement.Infrastructure.Configure >= 1.0.0",
+      "CommentManagement.Infrastructure.Configure >= 1.0.0",
       "DiscountManagement.Infrastructure.Configure >= 1.0.0",
       "InventoryManagement.Infrastructure.Configure >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
@@ -8544,6 +8645,9 @@
           "projectReferences": {
             "D:\\Programming\\Back End\\ShopProject\\ShopProject\\ArticleManagement.Infrastructure.Configure\\ArticleManagement.Infrastructure.Configure.csproj": {
               "projectPath": "D:\\Programming\\Back End\\ShopProject\\ShopProject\\ArticleManagement.Infrastructure.Configure\\ArticleManagement.Infrastructure.Configure.csproj"
+            },
+            "D:\\Programming\\Back End\\ShopProject\\ShopProject\\CommentManagement.Infrastructure.Configure\\CommentManagement.Infrastructure.Configure.csproj": {
+              "projectPath": "D:\\Programming\\Back End\\ShopProject\\ShopProject\\CommentManagement.Infrastructure.Configure\\CommentManagement.Infrastructure.Configure.csproj"
             },
             "D:\\Programming\\Back End\\ShopProject\\ShopProject\\DiscountManagement.Infrastructure.Configure\\DiscountManagement.Infrastructure.Configure.csproj": {
               "projectPath": "D:\\Programming\\Back End\\ShopProject\\ShopProject\\DiscountManagement.Infrastructure.Configure\\DiscountManagement.Infrastructure.Configure.csproj"

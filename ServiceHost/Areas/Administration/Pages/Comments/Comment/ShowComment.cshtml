@@ -1,0 +1,40 @@
+﻿@model CommentManagement.Application.Contract.CommentApp.ViewModelComment
+
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">نمایش پاسخ</h4>
+</div>
+
+<div class="modal-body">
+    <table class="table table-bordered">
+        @if (Model != null)
+        {
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>نام</th>
+                    <th>ایمیل</th>
+                    <th>پیغام</th>
+                    <th>تاریخ ایجاد</th>
+            </thead>
+            <tbody>
+
+                <tr class="text-black">
+                    <td>@Model.Id</td>
+                    <td>@Model.Name</td>
+                    <td>@Model.Email</td>
+                    <td>@Model.Message</td>
+                    <td>@Model.CreateionDate</td>
+                </tr>
+            </tbody>
+        }
+        else
+        {
+            <h4>به این پرسش پاسخ داده نشده است.</h4>
+        }
+    </table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">بستن</button>
+</div>

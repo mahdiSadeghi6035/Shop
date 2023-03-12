@@ -14,7 +14,7 @@ namespace ShopManagement.Presentation.Api
         {
             _productQuery = productQuery;
         }
-        [HttpGet]
+        [HttpGet("GetAllProduct")]
         public IEnumerable<ProductModel> Product()
         {
             return _productQuery.GetProduct();

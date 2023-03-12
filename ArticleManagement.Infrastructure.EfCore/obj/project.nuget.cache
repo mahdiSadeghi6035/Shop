@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5au1BzOioYoMzy9FxrMJ+BXB0iTtFoxPADSyrMFAFQLRsrDhUvcb3/i91I1aYgSNgLlavBLyA5qcGgnWwP3PEg==",
+  "dgSpecHash": "4yF7sQf2yTwVRzkEoZZT1lL8XEGkoRXLaaexS3kgw0ajObMXCF6VIFLl5OFq44tTbDMbXCZLyQ6g10qjt5H0Tw==",
   "success": true,
   "projectFilePath": "D:\\Programming\\Back End\\ShopProject\\ShopProject\\ArticleManagement.Infrastructure.EfCore\\ArticleManagement.Infrastructure.EfCore.csproj",
   "expectedPackageFiles": [

@@ -1,5 +1,6 @@
 using _0_Framework.Application;
 using ArticleManagement.Infrastructure.Configure;
+using CommentManagement.Infrastructure.Configure;
 using DiscountManagement.Infrastructure.Configure;
 using InventoryManagement.Infrastructure.Configure;
 using Microsoft.AspNetCore.Builder;
@@ -35,6 +36,7 @@ namespace ServiceHost
             DicountManagementBootstraper.Configure(services, connectionString);
             InventoryManagementBootstraper.Configure(services, connectionString);
             ArticleManagementBootstraper.Configure(services, connectionString);
+            CommentManagementBootstraper.Configure(services, connectionString);
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddRazorPages()
                 .AddApplicationPart(typeof(ProductController).Assembly);

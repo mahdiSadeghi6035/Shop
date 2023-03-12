@@ -255,3 +255,16 @@ D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Raz
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\CodeDiscount\Create.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\CodeDiscount\Edit.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Discounts\CodeDiscount\Index.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrastructure.Configure.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrstructure.EfCore.dll
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrastructure.Configure.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\CommentManagement.Application.Contract.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\CommentManagement.Domain.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\bin\Debug\net5.0\CommentManagement.Infrstructure.EfCore.pdb
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Comments\Comment\Index.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Comments\Comment\ShowComment.cshtml.g.cs
+D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\Comments\Comment\GetReply.cshtml.g.cs

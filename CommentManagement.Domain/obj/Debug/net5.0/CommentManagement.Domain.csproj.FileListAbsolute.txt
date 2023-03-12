@@ -1,0 +1,17 @@
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\bin\Debug\net5.0\CommentManagement.Domain.deps.json
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\bin\Debug\net5.0\CommentManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\bin\Debug\net5.0\CommentManagement.Domain.pdb
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\bin\Debug\net5.0\CommentManagement.Application.Contract.dll
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\bin\Debug\net5.0\_0_Framework.dll
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\bin\Debug\net5.0\CommentManagement.Application.Contract.pdb
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\bin\Debug\net5.0\_0_Framework.pdb
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\obj\Debug\net5.0\CommentManagement.Domain.csproj.AssemblyReference.cache
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\obj\Debug\net5.0\CommentManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\obj\Debug\net5.0\CommentManagement.Domain.AssemblyInfoInputs.cache
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\obj\Debug\net5.0\CommentManagement.Domain.AssemblyInfo.cs
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\obj\Debug\net5.0\CommentManagement.Domain.csproj.CoreCompileInputs.cache
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\obj\Debug\net5.0\CommentManagement.Domain.csproj.CopyComplete
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\obj\Debug\net5.0\CommentManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\obj\Debug\net5.0\refint\CommentManagement.Domain.dll
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\obj\Debug\net5.0\CommentManagement.Domain.pdb
+D:\Programming\Back End\ShopProject\ShopProject\CommentManagement.Domain\obj\Debug\net5.0\ref\CommentManagement.Domain.dll
