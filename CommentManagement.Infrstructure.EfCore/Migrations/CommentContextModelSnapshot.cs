@@ -59,6 +59,69 @@ namespace CommentManagement.Infrstructure.EfCore.Migrations
 
                     b.ToTable("Comment");
                 });
+
+            modelBuilder.Entity("CommentManagement.Domain.CommentScoreAgg.CommentScore", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<long>("AccountId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsRemove")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CommentScore");
+                });
+
+            modelBuilder.Entity("CommentManagement.Domain.CommentScoreAgg.CommentScore", b =>
+                {
+                    b.OwnsMany("CommentManagement.Domain.CommentScoreAgg.CommentScoreOption", "CommentScoreOptions", b1 =>
+                        {
+                            b1.Property<long>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("bigint")
+                                .UseIdentityColumn();
+
+                            b1.Property<long>("CommentScoreId")
+                                .HasColumnType("bigint");
+
+                            b1.Property<string>("Description")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<bool>("Operation")
+                                .HasColumnType("bit");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("CommentScoreId");
+
+                            b1.ToTable("CommentScoreOption");
+
+                            b1.WithOwner("CommentScores")
+                                .HasForeignKey("CommentScoreId");
+
+                            b1.Navigation("CommentScores");
+                        });
+
+                    b.Navigation("CommentScoreOptions");
+                });
 #pragma warning restore 612, 618
         }
     }

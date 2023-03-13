@@ -235,7 +235,6 @@ D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Raz
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administration\Pages\_ViewStart.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
-D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 D:\Programming\Back End\ShopProject\ShopProject\ServiceHost\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs

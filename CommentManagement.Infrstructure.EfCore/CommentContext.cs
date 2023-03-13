@@ -1,4 +1,5 @@
 ﻿using CommentManagement.Domain.CommentAgg;
+using CommentManagement.Domain.CommentScoreAgg;
 using CommentManagement.Infrstructure.EfCore.Mapping;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,7 +8,7 @@ namespace CommentManagement.Infrstructure.EfCore
     public class CommentContext : DbContext
     {
         public DbSet<Comment> Comment { get; set; }
-
+        public DbSet<CommentScore> CommentScores{ get; set; }
         public CommentContext(DbContextOptions<CommentContext> options) : base(options)
         {
            

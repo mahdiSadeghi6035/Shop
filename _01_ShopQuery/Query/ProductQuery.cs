@@ -28,7 +28,7 @@ namespace _01_ShopQuery.Query
                 Id = x.Id,
                 Slug = x.Slug,
                 Name = x.Name,
-                Picture = x.Picture,
+                Picture = "~/fileUploader/" + x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
             }).OrderByDescending(x => x.Id).ToList();
@@ -68,7 +68,7 @@ namespace _01_ShopQuery.Query
                 Id = x.Id,
                 Slug = x.Slug,
                 Name = x.Name,
-                Picture = x.Picture,
+                Picture = "~/fileUploader/" + x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
             });
